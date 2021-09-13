@@ -13,6 +13,7 @@
 		180CD16526EDAE7800783E3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180CD16426EDAE7800783E3E /* Preview Assets.xcassets */; };
 		180CD17026EDAE7800783E3E /* music_app_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CD16F26EDAE7800783E3E /* music_app_iosTests.swift */; };
 		180CD17B26EDAE7800783E3E /* music_app_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CD17A26EDAE7800783E3E /* music_app_iosUITests.swift */; };
+		1824A9EF26EF068600BE97A1 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1824A9EE26EF068600BE97A1 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		180CD17626EDAE7800783E3E /* music-app-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "music-app-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180CD17A26EDAE7800783E3E /* music_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = music_app_iosUITests.swift; sourceTree = "<group>"; };
 		180CD17C26EDAE7800783E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1824A9EE26EF068600BE97A1 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				180CD15D26EDAE7700783E3E /* music_app_iosApp.swift */,
 				180CD15F26EDAE7700783E3E /* ContentView.swift */,
+				1824A9EE26EF068600BE97A1 /* SwiftUIView.swift */,
 				180CD16126EDAE7800783E3E /* Assets.xcassets */,
 				180CD16626EDAE7800783E3E /* Info.plist */,
 				180CD16326EDAE7800783E3E /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				180CD16026EDAE7700783E3E /* ContentView.swift in Sources */,
 				180CD15E26EDAE7700783E3E /* music_app_iosApp.swift in Sources */,
+				1824A9EF26EF068600BE97A1 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
