@@ -15,6 +15,5 @@ struct Album: Hashable, Codable, Identifiable {
     var productArtists: [Artist]
     var productReleaseDate: String
     var genre: String
-    var count: Int
     var audios: [Audio]
 }
