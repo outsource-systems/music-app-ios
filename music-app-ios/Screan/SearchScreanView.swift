@@ -9,18 +9,27 @@ import SwiftUI
 
 struct SearchScreanView: View {
     var body: some View {
-        NavigationView {
+        ZStack {
+            Color("Background").edgesIgnoringSafeArea(.all)
             ScrollView {
                 
-            }
-        }.navigationTitle("Top View")
+            }.overlay(
+                ZStack {
+                    VStack {
+                        SearchBarView()
+                        ScrollMenuView()
+                        Spacer()
+                    }
+                }
+            )
+        }
     }
 }
 
 struct SearchScreanView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SearchScreanView().environment(\.colorScheme, .dark)
+            SearchScreanView().environment(\.colorScheme, .dark).background(Color.black)
             SearchScreanView()
         }
     }

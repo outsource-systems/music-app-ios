@@ -9,16 +9,18 @@ import SwiftUI
 
 struct ItemSampleView: View {
     let size: CGFloat
+    var cornerRadius: CGFloat
     
     init(size: CGFloat = 150) {
         self.size = size
+        self.cornerRadius = CGFloat(Int(size * 0.075))
     }
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .bottomLeading, endPoint: .topTrailing)
+        Image("SampleAudioImage")
+            .resizable()
             .frame(width: size, height: size)
-            .clipped()
-            .mask(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .cornerRadius(cornerRadius)
     }
 }
 

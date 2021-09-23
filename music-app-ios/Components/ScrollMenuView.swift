@@ -47,7 +47,7 @@ struct ScrollMenuView: View {
 
 struct ScrollMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollMenuView().environment(\.colorScheme, .dark)
+        ScrollMenuView().environment(\.colorScheme, .dark).background(Color.black)
         ScrollMenuView()
     }
 }

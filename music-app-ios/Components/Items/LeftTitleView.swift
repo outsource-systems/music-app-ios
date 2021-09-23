@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct LeftTitleView: View {
+    let title: String
+    
+    init (title: String = "Title") {
+        self.title = title
+    }
     var body: some View {
         HStack {
             Spacer().frame(width: 20)
-            Text("Title")
+            Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.leading)

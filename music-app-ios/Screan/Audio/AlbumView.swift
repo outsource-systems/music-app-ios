@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct AlbumView: View {
+    let album: Album
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: true) {
                     AlbumHeaderView()
-                    AlbumCoverView()
+                    AlbumCoverView(imageUrl: album.posterFile, title: album.productTitle, artists: album.productArtists, genre: album.genre, releaseDate: album.productReleaseDate)
                     PlayAndShuffleButtonView()
-                    AudioTitleItemsView()
+                    AudioTitleItemsView(audios: album.audios)
             }
         }
     }
@@ -23,8 +24,9 @@ struct AlbumView: View {
 
 struct AlbumView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumView().environment(\.colorScheme, .dark)
-        AlbumView()
+        let albumViewModel: AlbumViewModel = AlbumViewModel()
+        AlbumView(album: albumViewModel.album).environment(\.colorScheme, .dark)
+        AlbumView(album: albumViewModel.album)
     }
 }
 

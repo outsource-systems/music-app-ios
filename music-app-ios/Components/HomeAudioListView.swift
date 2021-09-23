@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct HomeAudioListView: View {
+    var productListViewModel: ProductListViewModel
+    var recommendProductViewModel: RecommendProductViewModel
+    
     var body: some View {
         VStack {
             Spacer().frame(height: 20)
-            LeftImageItemView()
+            RecommendProductView(recommendProduct: recommendProductViewModel.recommendProduct)
             Spacer().frame(height: 20)
-            Divider()
-            Spacer().frame(height: 20)
-            LeftTitleView()
-            HListItemView()
-            Divider()
-            LeftTitleView()
-            HListItemView()
+            ForEach(productListViewModel.productsLists, id: \.self) { productList in
+                Divider()
+                Spacer().frame(height: 20)
+                ListHeader(headerTitle: productList.productsTitle, rightLinkText: "See All")
+                HListItemView(products: productList.products)
+            }
         }.padding(.bottom, 200)
     }
 }
 
 struct HomeAudioListView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeAudioListView()
+        let productListViewModel: ProductListViewModel = ProductListViewModel()
+        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
+        HomeAudioListView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
     }
 }

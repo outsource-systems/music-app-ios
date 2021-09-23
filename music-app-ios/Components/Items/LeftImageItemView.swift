@@ -8,21 +8,35 @@
 import SwiftUI
 
 struct LeftImageItemView: View {
+    let size: CGFloat
+    let title: String
+    let count: Int
+    let date: String
+    let imageUrl: String?
+
+    init (size: CGFloat = 100, title: String = "No Title", count: Int = 1, date: String = "SEP 8, 2021", imageUrl: String? = nil) {
+        self.size = size
+        self.title = title
+        self.count = count
+        self.date = date
+        self.imageUrl = imageUrl
+    }
+    
     var body: some View {
         HStack {
             Spacer().frame(width: 20)
-            ItemSampleView(size: 100)
+            ImageCornerRadiusView(size: size, imageUrl: imageUrl)
             Spacer().frame(width: 20)
             VStack {
                 Spacer().frame(height: 5)
-                Text("SEP 8, 2021")
+                Text(date)
                     .font(.subheadline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text("Audio Title")
+                Text(title)
                     .font(.title3)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text("1 song")
+                Text("\(count) song")
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack {
                     AddIconView(size: 20)

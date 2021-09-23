@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct TabBarView: View {
+    var productListViewModel: ProductListViewModel
+    var recommendProductViewModel: RecommendProductViewModel
     var body: some View {
             TabView {
-                HomeScreanView()
+                HomeScreanView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
                     .tabItem {
                         VStack {
                             Image(systemName: "house.fill")
@@ -58,9 +60,11 @@ struct TabBarView: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
+        let productListViewModel: ProductListViewModel = ProductListViewModel()
+        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
         Group {
-            TabBarView().environment(\.colorScheme, .dark)
-            TabBarView()
+            TabBarView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel).environment(\.colorScheme, .dark)
+            TabBarView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
         }
     }
 }

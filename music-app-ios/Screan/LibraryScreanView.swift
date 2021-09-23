@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct LibraryScreanView: View {
+    let menus: [String] = ["Playlists","Artists","Albums","Songs","Genres","Composers"]
     var body: some View {
-        ZStack {
-            Color("Background").edgesIgnoringSafeArea(.all)
-            Text("LibraryScreanView")
-        }
+        NavigationView {
+            List(menus, id: \.self) { menu in
+                NavigationLink(destination: Text(menu)) {
+                    Text(menu)
+                }
+            }
+            .navigationTitle("Library")
+        }.overlay(
+            VStack {
+                HStack {
+                    Spacer()
+                    TextButtonView(labelText: "Edit")
+                }
+                Spacer()
+            }
+        )
     }
 }
 

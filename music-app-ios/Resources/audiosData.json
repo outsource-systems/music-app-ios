@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Best Friend",
+        "time": "2:51",
+        "artists": [{
+            "id": 1,
+            "name": "microM",
+            "description": "",
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+        }],
+        "lyrists": [],
+        "composers": [],
+        "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.png?alt=media&token=7af1951a-98d5-456f-8526-2a8f42d9a157",
+        "isFavorite": false
+    },
+    {
+        "id": 2,
+        "title": "Dive",
+        "time": "1:34",
+        "artists": [{
+            "id": 1,
+            "name": "microM",
+            "description": "",
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+        }],
+        "lyrists": [],
+        "composers": [],
+        "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/ZZZ%20MixTape.jpg?alt=media&token=398cc6eb-7a58-4586-8d8a-db602c8b9835",
+        "isFavorite": false
+    },
+    {
+        "id": 3,
+        "title": "Lost Life",
+        "time": "2:46",
+        "artists": [{
+            "id": 1,
+            "name": "microM",
+            "description": "",
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+        }],
+        "lyrists": [],
+        "composers": [],
+        "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/ZZZ%20MixTape.jpg?alt=media&token=398cc6eb-7a58-4586-8d8a-db602c8b9835",
+        "isFavorite": false
+    }
+]

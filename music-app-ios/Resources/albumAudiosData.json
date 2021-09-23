@@ -1,0 +1,214 @@
+{
+    "id": 1,
+    "productType": "Album",
+    "productTitle": "ENZAN JUNGLE",
+    "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+    "productArtists": [{
+        "id": 1,
+        "name": "microM",
+        "description": "",
+        "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+    }],
+    "productReleaseDate": "2020",
+    "genre": "POP",
+    "audios": [
+        {
+            "id": 1,
+            "title": "Rainbow",
+            "time": "00:02:37",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "lyrists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "composers": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 1
+        },
+        {
+            "id": 2,
+            "title": "Nasty",
+            "time": "00:01:57",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "lyrists": [],
+            "composers": [],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 2
+        },
+        {
+            "id": 3,
+            "title": "Remember",
+            "time": "00:02:17",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "lyrists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "composers": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 3
+        },
+        {
+            "id": 4,
+            "title": "Juicy Moonlight",
+            "time": "00:02:52",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "lyrists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "composers": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 4
+        },
+        {
+            "id": 5,
+            "title": "Beat Friend",
+            "time": "00:02:51",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                },
+                {
+                    "id": 2,
+                    "name": "KOTA",
+                    "description": "",
+                    "posterFile": ""
+                },
+                {
+                    "id": 3,
+                    "name": "NASUKA",
+                    "description": "",
+                    "posterFile": ""
+                }
+            ],
+            "lyrists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "composers": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 5
+        },
+        {
+            "id": 6,
+            "title": "Kiro",
+            "time": "00:02:28",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                },
+                {
+                    "id": 3,
+                    "name": "NASUKA",
+                    "description": "",
+                    "posterFile": ""
+                },
+                {
+                    "id": 4,
+                    "name": "RENZAN",
+                    "description": "",
+                    "posterFile": ""
+                },
+            ],
+            "lyrists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "composers": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 6
+        },
+        {
+            "id": 7,
+            "title": "Before Night",
+            "time": "00:03:37",
+            "artists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "lyrists": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "composers": [{
+                "id": 1,
+                "name": "microM",
+                "description": "",
+                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+            }],
+            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "isFavorite": false,
+            "diskNumber": 7
+        },
+    ]
+}

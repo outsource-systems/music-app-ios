@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScreanView: View {
+    var productListViewModel: ProductListViewModel
+    var recommendProductViewModel: RecommendProductViewModel
     var body: some View {
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
@@ -56,7 +58,7 @@ struct HomeScreanView: View {
                     },
                     alignment: .top
                 )
-                HomeAudioListView()
+                HomeAudioListView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
             }
         }
     }
@@ -64,9 +66,11 @@ struct HomeScreanView: View {
 
 struct HomeScreanView_Previews: PreviewProvider {
     static var previews: some View {
+        let productListViewModel: ProductListViewModel = ProductListViewModel()
+        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
         Group {
-            HomeScreanView().environment(\.colorScheme, .dark)
-            HomeScreanView()
+            HomeScreanView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel).environment(\.colorScheme, .dark)
+            HomeScreanView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
         }
     }
 }

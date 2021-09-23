@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct AudioTitleItemsView: View {
+    var audios: [Audio]
     var body: some View {
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
-                AudioListItemView()
-                AudioListItemView()
-                AudioListItemView()
+                ForEach(audios, id: \.self) { audio in
+                    AudioListItemView(title: audio.title, number: audio.diskNumber ?? 0)
+                }
             }
             .padding(.top, 30)
         }
@@ -23,8 +24,9 @@ struct AudioTitleItemsView: View {
 
 struct AudioTitleItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioTitleItemsView().environment(\.colorScheme, .dark)
-        AudioTitleItemsView()
+        let albumViewModel: AlbumViewModel = AlbumViewModel()
+        AudioTitleItemsView(audios: albumViewModel.album.audios).environment(\.colorScheme, .dark)
+        AudioTitleItemsView(audios: albumViewModel.album.audios)
     }
 }
 
