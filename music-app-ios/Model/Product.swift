@@ -12,9 +12,9 @@ struct Product: Hashable, Codable, Identifiable {
     var productType: String
     var productTitle: String
     var posterFile: String
-    var productArtists: [Artist]
+    var productArtists: [Artist]?
     var productReleaseDate: String
-    var genre: String
+    var genre: String?
     var count: Int?
-    var audios: [Audio]
+    var audios: [Audio]?
 }

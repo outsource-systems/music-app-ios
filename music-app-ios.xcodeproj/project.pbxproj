@@ -164,6 +164,10 @@
 		1855D06126FA3DBB008BE1BF /* RecommendProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855D06026FA3DBB008BE1BF /* RecommendProductView.swift */; };
 		18ADBADF26FC8532001207B3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBADE26FC8532001207B3 /* Album.swift */; };
 		18ADBAE126FC8576001207B3 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE026FC8576001207B3 /* ProductViewModel.swift */; };
+		18ADBAE526FCC2EB001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
+		18ADBAE626FCC300001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
+		18ADBAE726FCC300001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
+		18F3837D26FF4FAD007680DD /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3837C26FF4FAD007680DD /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +259,8 @@
 		1855D06026FA3DBB008BE1BF /* RecommendProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductView.swift; sourceTree = "<group>"; };
 		18ADBADE26FC8532001207B3 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		18ADBAE026FC8576001207B3 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		18ADBAE426FCC2EB001207B3 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		18F3837C26FF4FAD007680DD /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +393,7 @@
 			children = (
 				1855CF1926F4F74B008BE1BF /* TabBarView.swift */,
 				1855D06026FA3DBB008BE1BF /* RecommendProductView.swift */,
+				18F3837C26FF4FAD007680DD /* TextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 		1855CF5C26F5CAC0008BE1BF /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				18ADBAE426FCC2EB001207B3 /* ProductView.swift */,
 				1855CF6126F5CAF9008BE1BF /* AlbumView.swift */,
 				1855CFCE26F64480008BE1BF /* AudioPlayScreanView.swift */,
 			);
@@ -678,6 +686,7 @@
 				1855CFAB26F62D49008BE1BF /* ImageLoader.swift in Sources */,
 				1855D02326F89AB9008BE1BF /* Artist.swift in Sources */,
 				1855CF6F26F5CFAD008BE1BF /* AlbumHeaderView.swift in Sources */,
+				18ADBAE526FCC2EB001207B3 /* ProductView.swift in Sources */,
 				1855D05326FA326D008BE1BF /* ProductListViewModel.swift in Sources */,
 				1855D01F26F89AA1008BE1BF /* Composer.swift in Sources */,
 				1855CF2626F4F9BC008BE1BF /* SearchScreanView.swift in Sources */,
@@ -701,6 +710,7 @@
 				1855CF3226F4FA12008BE1BF /* SettingScreanView.swift in Sources */,
 				1855CF1A26F4F74B008BE1BF /* TabBarView.swift in Sources */,
 				1855CFE726F6FC9F008BE1BF /* EllipsesIconView.swift in Sources */,
+				18F3837D26FF4FAD007680DD /* TextView.swift in Sources */,
 				1855CF4626F5B720008BE1BF /* ItemView.swift in Sources */,
 				1855CFF126F75343008BE1BF /* Audio.swift in Sources */,
 				1855CF7326F5D031008BE1BF /* AlbumCoverView.swift in Sources */,
@@ -732,6 +742,7 @@
 				1855CF8526F5E215008BE1BF /* HomeAudioListView.swift in Sources */,
 				1855CF8926F5E7EA008BE1BF /* ScrollMenuView.swift in Sources */,
 				1855CF3326F4FA12008BE1BF /* SettingScreanView.swift in Sources */,
+				18ADBAE726FCC300001207B3 /* ProductView.swift in Sources */,
 				1855CF4B26F5B878008BE1BF /* LeftTitleView.swift in Sources */,
 				1855CF2B26F4F9DF008BE1BF /* BlogScreanView.swift in Sources */,
 				1855CFE426F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */,
@@ -780,6 +791,7 @@
 				1855CF8626F5E215008BE1BF /* HomeAudioListView.swift in Sources */,
 				1855CF8A26F5E7EA008BE1BF /* ScrollMenuView.swift in Sources */,
 				1855CF3426F4FA12008BE1BF /* SettingScreanView.swift in Sources */,
+				18ADBAE626FCC300001207B3 /* ProductView.swift in Sources */,
 				1855CF4C26F5B878008BE1BF /* LeftTitleView.swift in Sources */,
 				1855CF2C26F4F9DF008BE1BF /* BlogScreanView.swift in Sources */,
 				1855CFE526F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */,
