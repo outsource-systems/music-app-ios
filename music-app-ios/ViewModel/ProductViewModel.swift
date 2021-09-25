@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 final class ProductViewModel: ObservableObject {
-    @Published var product: Product = load("albumAudiosData.json")
+    @Published var product: Product = load("productData.json")
 }
