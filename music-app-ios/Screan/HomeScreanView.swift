@@ -11,56 +11,54 @@ struct HomeScreanView: View {
     var productListViewModel: ProductListViewModel
     var recommendProductViewModel: RecommendProductViewModel
     var body: some View {
-        ZStack {
-            Color("Background").edgesIgnoringSafeArea(.all)
-            ScrollView(.vertical, showsIndicators: false) {
-                ZStack {
-                    VStack {
-                        Image("HomeCover")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        Spacer()
-                    }
-                }.overlay(
-                    VStack {
+        NavigationView {
+            ZStack {
+                Color("Background").edgesIgnoringSafeArea(.all)
+                ScrollView(.vertical, showsIndicators: false) {
+                    ZStack {
                         VStack {
-                            Spacer().frame(height: 100)
-                        }.frame(maxWidth: .infinity)
-                         .background(
-                            LinearGradient(gradient: Gradient(colors: [Color("Background"), Color("Gradient")]), startPoint: .top, endPoint: .bottom)
-                         ).overlay(
+                            Image("HomeCover")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            Spacer()
+                        }
+                    }.overlay(
+                        VStack {
                             VStack {
                                 Text("MicroM")
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
                                     .multilineTextAlignment(.center)
                                     .frame(alignment: .top)
-                                Spacer()
-                            }
-                         )
-                        Spacer().frame(height: 200)
-                        VStack {
-                            Spacer().frame(height: 120)
-                        }.frame(maxWidth: .infinity)
-                        .background(
-                           LinearGradient(gradient: Gradient(colors: [Color("Gradient"), Color("Background")]), startPoint: .top, endPoint: .bottom)
-                        ).overlay(
+                                Spacer().frame(height: 100)
+                            }.frame(maxWidth: .infinity)
+                             .background(
+                                LinearGradient(gradient: Gradient(colors: [Color("Background"), Color("Gradient")]), startPoint: .top, endPoint: .bottom)
+                             )
+                            Spacer().frame(height: 200)
                             VStack {
-                                Spacer()
-                                HStack {
+                                Spacer().frame(height: 120)
+                            }.frame(maxWidth: .infinity)
+                            .background(
+                               LinearGradient(gradient: Gradient(colors: [Color("Gradient"), Color("Background")]), startPoint: .top, endPoint: .bottom)
+                            ).overlay(
+                                VStack {
                                     Spacer()
-                                    PlayIconView()
-                                    Spacer().frame(width: 20)
+                                    HStack {
+                                        Spacer()
+                                        PlayIconView()
+                                        Spacer().frame(width: 20)
+                                    }
+                                    Spacer().frame(height: 20)
                                 }
-                                Spacer().frame(height: 20)
-                            }
-                        )
-                    },
-                    alignment: .top
-                )
-                HomeAudioListView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
-            }
-        }
+                            )
+                        },
+                        alignment: .top
+                    )
+                    HomeAudioListView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+                }
+            }.navigationBarHidden(true)
+        }.accentColor(Color("ButtonLabel"))
     }
 }
 

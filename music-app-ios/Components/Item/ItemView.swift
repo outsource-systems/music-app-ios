@@ -25,7 +25,7 @@ struct ItemView: View {
             } else {
                 ItemSampleView(size: size)
             }
-            Text(title)
+            Text(title).foregroundColor(Color("Text"))
         }
     }
 }

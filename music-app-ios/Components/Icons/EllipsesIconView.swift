@@ -31,7 +31,7 @@ struct EllipsesIconView: View {
 
 struct EllipsesIconView_Previews: PreviewProvider {
     static var previews: some View {
-        EllipsesIconView(color: Color("Text"))
+        EllipsesIconView().environment(\.colorScheme, .dark).background(Color.black)
         EllipsesIconView()
     }
 }

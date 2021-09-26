@@ -10,6 +10,7 @@ import SwiftUI
 struct HListItemView: View {
     var audios: [Audio]?
     var products: [Product]?
+    let productViewModel: ProductViewModel = ProductViewModel()
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -20,7 +21,23 @@ struct HListItemView: View {
                     }
                 } else if (products != nil) {
                     ForEach(products ?? [], id: \.self) { product in
-                        ItemView(title: product.productTitle, size: 150, imageUrl: product.posterFile)
+                        NavigationLink(destination: ProductView(product: productViewModel.product).toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing){
+                                                Button(action: {}) {
+                                                    HStack {
+                                                        Text("+ Add")
+                                                    }
+                                                }
+                                            }
+                            ToolbarItem(placement: .navigationBarTrailing){
+                                                Button(action: {}) {
+                                                    Image(systemName: "ellipsis")
+                                                }
+                                            }
+                        }) {
+                            ItemView(title: product.productTitle, size: 150, imageUrl: product.posterFile)
+                                .navigationBarHidden(false)
+                        }
                     }
                 }
             }

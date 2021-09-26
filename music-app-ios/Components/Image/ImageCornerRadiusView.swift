@@ -35,7 +35,7 @@ struct ImageCornerRadiusView: View {
 
 struct ImageCornerRadiusView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageCornerRadiusView(size: 200, imageUrl:  "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.png?alt=media&token=7af1951a-98d5-456f-8526-2a8f42d9a157")
-        ImageCornerRadiusView(size: 200, imageUrl:  "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.png?alt=media&token=7af1951a-98d5-456f-8526-2a8f42d9a157", isShowShadow: true)
+        ImageCornerRadiusView(size: 200, imageUrl:  "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=05bbd0da-749b-4912-a613-5f489ca568f5")
+        ImageCornerRadiusView(size: 200, imageUrl:  "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=05bbd0da-749b-4912-a613-5f489ca568f5", isShowShadow: true)
     }
 }
