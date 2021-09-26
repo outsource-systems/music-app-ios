@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct LibraryScreanView: View {
-    let menus: [String] = ["Playlists","Artists","Albums","Songs","Genres","Composers"]
+    let libraryMenuViewModel: LibraryMenuViewModel = LibraryMenuViewModel()
+    
     var body: some View {
         NavigationView {
-            List(menus, id: \.self) { menu in
-                NavigationLink(destination: Text(menu)) {
-                    Text(menu)
+            List(libraryMenuViewModel.libraryMenu, id: \.self) { item in
+                NavigationLink(destination: Text(item.name)) {
+                    HStack {
+                        Image(systemName: item.icon).foregroundColor(Color("ButtonLabel")).frame(width: 30)
+                        Text(item.name)
+                            .font(.title3)
+                        Spacer()
+                    }
                 }
             }
-            .navigationTitle("Library")
-        }.overlay(
-            VStack {
-                HStack {
-                    Spacer()
-                    TextButtonView(labelText: "Edit")
-                }
-                Spacer()
-            }
-        )
+            .navigationTitle(LocalizedStringKey("Library"))
+            .toolbar(content: {
+                TextButtonView(labelText: "Edit")
+            })
+        }.accentColor(Color("ButtonLabel"))
     }
 }
 
@@ -33,7 +34,7 @@ struct LibraryScreanView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LibraryScreanView().environment(\.colorScheme, .dark)
-            LibraryScreanView()
+            LibraryScreanView().environment(\.locale, .init(identifier: "ja"))
         }
     }
 }

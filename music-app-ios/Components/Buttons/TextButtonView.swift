@@ -11,9 +11,8 @@ struct TextButtonView: View {
     let labelText: String
     var body: some View {
         Button(action: {}) {
-            Text(labelText)
-                .foregroundColor(Color("ButtonLabel"))
-        }
+            Text(LocalizedStringKey(labelText))
+        }.accentColor(Color("ButtonLabel"))
         .padding(.all)
     }
 }

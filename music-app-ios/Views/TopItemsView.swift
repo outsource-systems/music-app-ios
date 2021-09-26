@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct TopItemsView: View {
-    let items: [Audio]
+    let topItemViewModel: TopItemViewModel = TopItemViewModel()
+    // let items: [Audio] = topItemViewModel.audioList.audios
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ItemListView()
     }
 }
 
 struct TopItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        let topItemViewModel: TopItemViewModel = TopItemViewModel()
-        TopItemsView(items: topItemViewModel.audioList.audios)
+        TopItemsView()
     }
 }

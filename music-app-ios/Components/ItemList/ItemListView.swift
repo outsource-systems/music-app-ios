@@ -34,6 +34,7 @@ struct ItemListView: View {
 
 struct ItemListView_Previews: PreviewProvider {
     static var previews: some View {
+        ItemListView().environment(\.colorScheme, .dark).background(Color(.black))
         ItemListView()
     }
 }

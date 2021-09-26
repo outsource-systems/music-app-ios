@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SettingScreanView: View {
     var body: some View {
-        ZStack {
-            Color("Background").edgesIgnoringSafeArea(.all)
-            Text("SettingScreanView")
+        NavigationView {
+            VStack {
+            }.navigationTitle("Setting")
         }
     }
 }

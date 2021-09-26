@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 import CoreLocation
 
 struct Audio: Hashable, Codable, Identifiable {

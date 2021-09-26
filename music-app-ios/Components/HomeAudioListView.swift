@@ -16,13 +16,15 @@ struct HomeAudioListView: View {
             Spacer().frame(height: 20)
             RecommendProductView(recommendProduct: recommendProductViewModel.recommendProduct)
             Spacer().frame(height: 20)
+            TopItemsView()
+            Spacer().frame(height: 20)
             ForEach(productListViewModel.productsLists, id: \.self) { productList in
                 Divider()
                 Spacer().frame(height: 20)
                 ListHeader(headerTitle: productList.productsTitle, rightLinkText: "See All")
                 HListItemView(products: productList.products)
             }
-        }.padding(.bottom, 200)
+        }.padding(.bottom, 100)
     }
 }
 
