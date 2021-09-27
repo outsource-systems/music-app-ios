@@ -19,7 +19,7 @@ struct ItemHorizonAutoScrollView: View {
                                 Spacer().frame(width: 70)
                             }
                             ForEach((0...6), id: \.self) { row in
-                                ItemSampleView(size: size)
+                                ItemSampleView(size: size, assetImageName: "HomeCover")
                             }
                         }
                     }

@@ -50,9 +50,9 @@ struct PremiumRegistorView: View {
             Button(action: {}) {
                 Text("無料トライアル & 登録(980円/月)")
                     .fontWeight(.semibold)
-                    .frame(width: 340, height: 48)
+                    .frame(width: 340, height: 55)
                     .foregroundColor(Color(.white))
-                    .background(gradientBackGroundColor(colorOne: Color.blue, colorTwo: Color("SkyBlue")))
+                    .background(gradientBackGroundColor(colorOne: Color("ButtonLabel"), colorTwo: Color("ButtonLabel1")))
                     .cornerRadius(24)
             }.padding()
             Spacer()

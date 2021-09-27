@@ -24,6 +24,7 @@ struct HomeAudioListView: View {
                 ListHeader(headerTitle: productList.productsTitle, rightLinkText: "See All")
                 HListItemView(products: productList.products)
             }
+            PremiumButtonView()
         }.padding(.bottom, 100)
     }
 }

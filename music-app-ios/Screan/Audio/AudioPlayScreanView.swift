@@ -10,14 +10,7 @@ import SwiftUI
 struct AudioPlayScreanView: View {
     var body: some View {
         VStack {
-            RoundedRectangle(cornerRadius: 10, style: .circular)
-                .frame(width: 32, height: 4.5)
-                .clipped()
-                .padding(.vertical, 10)
-                .foregroundColor(Color(.tertiaryLabel))
-                .frame(maxWidth: .infinity)
-                .clipped()
-            ItemSampleView(size: 350)
+            ItemSampleView(size: 350).padding(.top)
             HStack {
                 Text("Title")
                     .font(.title2)

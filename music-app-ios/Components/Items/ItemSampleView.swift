@@ -10,14 +10,16 @@ import SwiftUI
 struct ItemSampleView: View {
     let size: CGFloat
     var cornerRadius: CGFloat
+    let assetImageName: String
     
-    init(size: CGFloat = 150) {
+    init(size: CGFloat = 150, assetImageName: String = "SampleAudioImage") {
         self.size = size
         self.cornerRadius = CGFloat(Int(size * 0.075))
+        self.assetImageName = assetImageName
     }
     
     var body: some View {
-        Image("SampleAudioImage")
+        Image(assetImageName)
             .resizable()
             .frame(width: size, height: size)
             .cornerRadius(cornerRadius)
