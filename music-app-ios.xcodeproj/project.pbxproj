@@ -12,6 +12,11 @@
 		180CD16526EDAE7800783E3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180CD16426EDAE7800783E3E /* Preview Assets.xcassets */; };
 		180CD17026EDAE7800783E3E /* music_app_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CD16F26EDAE7800783E3E /* music_app_iosTests.swift */; };
 		180CD17B26EDAE7800783E3E /* music_app_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180CD17A26EDAE7800783E3E /* music_app_iosUITests.swift */; };
+		181FCE9527060F300050EDE7 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE9427060F300050EDE7 /* ViewRouter.swift */; };
+		181FCE99270619D20050EDE7 /* ProductVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE98270619D20050EDE7 /* ProductVListView.swift */; };
+		181FCE9B27061A580050EDE7 /* ProductHListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE9A27061A580050EDE7 /* ProductHListView.swift */; };
+		181FCE9D27061C880050EDE7 /* ProductNavigationLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE9C27061C880050EDE7 /* ProductNavigationLinkView.swift */; };
+		181FCEA027061E1C0050EDE7 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE9F27061E1C0050EDE7 /* ProductListView.swift */; };
 		1855CF1826F4F632008BE1BF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF1726F4F632008BE1BF /* MainView.swift */; };
 		1855CF1A26F4F74B008BE1BF /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF1926F4F74B008BE1BF /* TabBarView.swift */; };
 		1855CF2426F4F996008BE1BF /* HomeScreanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF2326F4F996008BE1BF /* HomeScreanView.swift */; };
@@ -36,7 +41,6 @@
 		1855CF4626F5B720008BE1BF /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF4526F5B720008BE1BF /* ItemView.swift */; };
 		1855CF4726F5B720008BE1BF /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF4526F5B720008BE1BF /* ItemView.swift */; };
 		1855CF4826F5B720008BE1BF /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF4526F5B720008BE1BF /* ItemView.swift */; };
-		1855CF4A26F5B878008BE1BF /* LeftTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF4926F5B878008BE1BF /* LeftTitleView.swift */; };
 		1855CF4E26F5B913008BE1BF /* LeftImageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF4D26F5B913008BE1BF /* LeftImageItemView.swift */; };
 		1855CF5226F5B944008BE1BF /* ItemSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF5126F5B944008BE1BF /* ItemSampleView.swift */; };
 		1855CF5326F5B944008BE1BF /* ItemSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF5126F5B944008BE1BF /* ItemSampleView.swift */; };
@@ -65,9 +69,6 @@
 		1855CF9A26F619F3008BE1BF /* HListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF9926F619F3008BE1BF /* HListItemView.swift */; };
 		1855CF9B26F619F3008BE1BF /* HListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF9926F619F3008BE1BF /* HListItemView.swift */; };
 		1855CF9C26F619F3008BE1BF /* HListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF9926F619F3008BE1BF /* HListItemView.swift */; };
-		1855CF9E26F61A80008BE1BF /* VListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF9D26F61A80008BE1BF /* VListItemView.swift */; };
-		1855CF9F26F61A80008BE1BF /* VListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF9D26F61A80008BE1BF /* VListItemView.swift */; };
-		1855CFA026F61A80008BE1BF /* VListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CF9D26F61A80008BE1BF /* VListItemView.swift */; };
 		1855CFA226F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFA126F62B09008BE1BF /* ImageCornerRadiusView.swift */; };
 		1855CFA326F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFA126F62B09008BE1BF /* ImageCornerRadiusView.swift */; };
 		1855CFA426F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFA126F62B09008BE1BF /* ImageCornerRadiusView.swift */; };
@@ -197,6 +198,11 @@
 		180CD17626EDAE7800783E3E /* music-app-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "music-app-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180CD17A26EDAE7800783E3E /* music_app_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = music_app_iosUITests.swift; sourceTree = "<group>"; };
 		180CD17C26EDAE7800783E3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181FCE9427060F300050EDE7 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		181FCE98270619D20050EDE7 /* ProductVListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVListView.swift; sourceTree = "<group>"; };
+		181FCE9A27061A580050EDE7 /* ProductHListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHListView.swift; sourceTree = "<group>"; };
+		181FCE9C27061C880050EDE7 /* ProductNavigationLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNavigationLinkView.swift; sourceTree = "<group>"; };
+		181FCE9F27061E1C0050EDE7 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		1855CF1726F4F632008BE1BF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1855CF1926F4F74B008BE1BF /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		1855CF2326F4F996008BE1BF /* HomeScreanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreanView.swift; sourceTree = "<group>"; };
@@ -207,7 +213,6 @@
 		1855CF3926F4FEBB008BE1BF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		1855CF3D26F5B2BD008BE1BF /* PlayIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayIconView.swift; sourceTree = "<group>"; };
 		1855CF4526F5B720008BE1BF /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
-		1855CF4926F5B878008BE1BF /* LeftTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTitleView.swift; sourceTree = "<group>"; };
 		1855CF4D26F5B913008BE1BF /* LeftImageItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImageItemView.swift; sourceTree = "<group>"; };
 		1855CF5126F5B944008BE1BF /* ItemSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSampleView.swift; sourceTree = "<group>"; };
 		1855CF5726F5C302008BE1BF /* AddIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIconView.swift; sourceTree = "<group>"; };
@@ -218,7 +223,6 @@
 		1855CF8726F5E7EA008BE1BF /* ScrollMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollMenuView.swift; sourceTree = "<group>"; };
 		1855CF9526F5F86D008BE1BF /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		1855CF9926F619F3008BE1BF /* HListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HListItemView.swift; sourceTree = "<group>"; };
-		1855CF9D26F61A80008BE1BF /* VListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VListItemView.swift; sourceTree = "<group>"; };
 		1855CFA126F62B09008BE1BF /* ImageCornerRadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCornerRadiusView.swift; sourceTree = "<group>"; };
 		1855CFA626F62D21008BE1BF /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		1855CFAA26F62D49008BE1BF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 				180CD16326EDAE7800783E3E /* Preview Content */,
 				1855CF3926F4FEBB008BE1BF /* Color.xcassets */,
 				18F3838A26FF623B007680DD /* TestView.swift */,
+				181FCE9427060F300050EDE7 /* ViewRouter.swift */,
 			);
 			path = "music-app-ios";
 			sourceTree = "<group>";
@@ -371,6 +376,14 @@
 			path = "music-app-iosUITests";
 			sourceTree = "<group>";
 		};
+		181FCE9E27061DBB0050EDE7 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1855CFCA26F63CFC008BE1BF /* ListHeader.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		1855CF2226F4F942008BE1BF /* Screan */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +401,7 @@
 		1855CF3526F4FABE008BE1BF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				181FCE9E27061DBB0050EDE7 /* List */,
 				18B4C41D27006715007EB6E5 /* Item */,
 				18B4C41A270066A2007EB6E5 /* ItemList */,
 				18ADBAD926FC70B5001207B3 /* Content */,
@@ -422,7 +436,6 @@
 				1855CF5126F5B944008BE1BF /* ItemSampleView.swift */,
 				1855CF7B26F5D467008BE1BF /* AudioListItemView.swift */,
 				1855CF9926F619F3008BE1BF /* HListItemView.swift */,
-				1855CF9D26F61A80008BE1BF /* VListItemView.swift */,
 				18F3838626FF5E5C007680DD /* ListItemView.swift */,
 			);
 			path = Items;
@@ -544,6 +557,10 @@
 				1855CF4D26F5B913008BE1BF /* LeftImageItemView.swift */,
 				18F3838026FF59DB007680DD /* ProductCoverView.swift */,
 				18F3838826FF5FEE007680DD /* ProductItemListView.swift */,
+				181FCE98270619D20050EDE7 /* ProductVListView.swift */,
+				181FCE9A27061A580050EDE7 /* ProductHListView.swift */,
+				181FCE9C27061C880050EDE7 /* ProductNavigationLinkView.swift */,
+				181FCE9F27061E1C0050EDE7 /* ProductListView.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -558,8 +575,6 @@
 		18B4C41A270066A2007EB6E5 /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
-				1855CFCA26F63CFC008BE1BF /* ListHeader.swift */,
-				1855CF4926F5B878008BE1BF /* LeftTitleView.swift */,
 				18B4C41B270066BA007EB6E5 /* ItemListView.swift */,
 				18B4C4202700726F007EB6E5 /* ItemListVerticalView.swift */,
 			);
@@ -742,6 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1855CFCF26F64480008BE1BF /* AudioPlayScreanView.swift in Sources */,
+				181FCE9B27061A580050EDE7 /* ProductHListView.swift in Sources */,
 				1884D7A127021D7100782993 /* PremiumButtonView.swift in Sources */,
 				1855CFAF26F62D72008BE1BF /* ImageCache.swift in Sources */,
 				1855CF2A26F4F9DF008BE1BF /* BlogScreanView.swift in Sources */,
@@ -750,14 +766,13 @@
 				1855CFCB26F63CFC008BE1BF /* ListHeader.swift in Sources */,
 				1864BC8D2700B2D600B52BD4 /* extensionLocalizedStringKey.swift in Sources */,
 				1855D03326F8DDEF008BE1BF /* Product.swift in Sources */,
-				1855CF9E26F61A80008BE1BF /* VListItemView.swift in Sources */,
 				1855CFAB26F62D49008BE1BF /* ImageLoader.swift in Sources */,
+				181FCE99270619D20050EDE7 /* ProductVListView.swift in Sources */,
 				1855D02326F89AB9008BE1BF /* Artist.swift in Sources */,
 				18ADBAE526FCC2EB001207B3 /* ProductView.swift in Sources */,
 				1855D05326FA326D008BE1BF /* ProductListViewModel.swift in Sources */,
 				1855D01F26F89AA1008BE1BF /* Composer.swift in Sources */,
 				1855CF2626F4F9BC008BE1BF /* SearchScreanView.swift in Sources */,
-				1855CF4A26F5B878008BE1BF /* LeftTitleView.swift in Sources */,
 				1855CFA226F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */,
 				1855D03F26F8E070008BE1BF /* AudioList.swift in Sources */,
 				1855CF9626F5F86D008BE1BF /* SearchBarView.swift in Sources */,
@@ -789,6 +804,7 @@
 				1855CFF526F75598008BE1BF /* AudiosViewModel.swift in Sources */,
 				180CD15E26EDAE7700783E3E /* music_app_iosApp.swift in Sources */,
 				1855D05626FA335D008BE1BF /* jsonLoadModule.swift in Sources */,
+				181FCEA027061E1C0050EDE7 /* ProductListView.swift in Sources */,
 				18F3838926FF5FEE007680DD /* ProductItemListView.swift in Sources */,
 				1855CFB326F62D9B008BE1BF /* IndicatorView.swift in Sources */,
 				1884D79B2701F88400782993 /* PremiumRegistorView.swift in Sources */,
@@ -797,12 +813,14 @@
 				1855D06126FA3DBB008BE1BF /* RecommendProductView.swift in Sources */,
 				1855CF2E26F4FA01008BE1BF /* LibraryScreanView.swift in Sources */,
 				18B4C41327005041007EB6E5 /* SampleScreanView.swift in Sources */,
+				181FCE9527060F300050EDE7 /* ViewRouter.swift in Sources */,
 				1855CF6B26F5CDEC008BE1BF /* PlayAndShuffleButtonView.swift in Sources */,
 				1855CF2426F4F996008BE1BF /* HomeScreanView.swift in Sources */,
 				18B4C41C270066BA007EB6E5 /* ItemListView.swift in Sources */,
 				1855CF3E26F5B2BD008BE1BF /* PlayIconView.swift in Sources */,
 				18B4C4352700812D007EB6E5 /* LibraryMenuViewModel.swift in Sources */,
 				1855CF8826F5E7EA008BE1BF /* ScrollMenuView.swift in Sources */,
+				181FCE9D27061C880050EDE7 /* ProductNavigationLinkView.swift in Sources */,
 				1855CF5826F5C302008BE1BF /* AddIconView.swift in Sources */,
 				1855CFC326F63A53008BE1BF /* TextButtonView.swift in Sources */,
 				18B4C41F2700693D007EB6E5 /* ItemHorizontalView.swift in Sources */,
@@ -837,7 +855,6 @@
 				1855CF2726F4F9BC008BE1BF /* SearchScreanView.swift in Sources */,
 				1855D04026F8E070008BE1BF /* AudioList.swift in Sources */,
 				1855CF2F26F4FA01008BE1BF /* LibraryScreanView.swift in Sources */,
-				1855CF9F26F61A80008BE1BF /* VListItemView.swift in Sources */,
 				1855CF9726F5F86D008BE1BF /* SearchBarView.swift in Sources */,
 				1855CF6C26F5CDEC008BE1BF /* PlayAndShuffleButtonView.swift in Sources */,
 				1855CFA326F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */,
@@ -879,7 +896,6 @@
 				1855CF2826F4F9BC008BE1BF /* SearchScreanView.swift in Sources */,
 				1855D04126F8E070008BE1BF /* AudioList.swift in Sources */,
 				1855CF3026F4FA01008BE1BF /* LibraryScreanView.swift in Sources */,
-				1855CFA026F61A80008BE1BF /* VListItemView.swift in Sources */,
 				1855CF9826F5F86D008BE1BF /* SearchBarView.swift in Sources */,
 				1855CF6D26F5CDEC008BE1BF /* PlayAndShuffleButtonView.swift in Sources */,
 				1855CFA426F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */,

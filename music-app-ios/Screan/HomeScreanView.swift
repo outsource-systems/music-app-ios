@@ -25,7 +25,7 @@ struct HomeScreanView: View {
                     }.overlay(
                         VStack {
                             VStack {
-                                Text("MicroM")
+                                Text("microM")
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
                                     .multilineTextAlignment(.center)

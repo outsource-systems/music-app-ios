@@ -10,29 +10,11 @@ import SwiftUI
 struct VListItemView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                HStack {
-                    ItemView()
-                    ItemView()
-                }.frame(maxWidth: .infinity)
-                HStack {
-                    ItemView()
-                    ItemView()
-                }
-                HStack {
-                    ItemView()
-                    ItemView()
-                }
-                HStack {
-                    ItemView()
-                    ItemView()
-                }
-                HStack {
-                    ItemView()
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
+                ForEach((1...20), id: \.self) { index in
                     ItemView()
                 }
             }
-            .padding(.horizontal)
         }
     }
 }

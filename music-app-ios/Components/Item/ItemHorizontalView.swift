@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ItemHorizontalView: View {
-    let size: CGFloat = 50
-    let productTitle: String = "Album Name"
-    let relaseDate: String = "2020"
-    let title: String = "Title"
-    let imageUrl: String? = "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=05bbd0da-749b-4912-a613-5f489ca568f5"
+    var size: CGFloat = 50
+    var productTitle: String = "Album Name"
+    var relaseDate: String = "2020"
+    var title: String = "Title"
+    var imageUrl: String? = "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=05bbd0da-749b-4912-a613-5f489ca568f5"
     
     var body: some View {
         VStack(spacing: 3) {

@@ -24,7 +24,7 @@ struct LibraryScreanView: View {
             }
             .navigationTitle(LocalizedStringKey("Library"))
             .toolbar(content: {
-                TextButtonView(labelText: "Edit")
+                TextButtonView(labelText: "Edit", destination: AnyView(Text("Edit")))
             })
         }.accentColor(Color("ButtonLabel"))
     }

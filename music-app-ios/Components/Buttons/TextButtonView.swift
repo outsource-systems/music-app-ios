@@ -9,16 +9,20 @@ import SwiftUI
 
 struct TextButtonView: View {
     let labelText: String
+    @State var isLinkActive = false
+    let destination: AnyView
+    
     var body: some View {
-        Button(action: {}) {
-            Text(LocalizedStringKey(labelText))
-        }.accentColor(Color("ButtonLabel"))
-        .padding(.all)
+        NavigationLink(destination: destination, isActive: $isLinkActive) {
+            Button(action: { self.isLinkActive = true }) {
+                Text(LocalizedStringKey(labelText)).foregroundColor(Color("ButtonLabel"))
+            }.padding(.all)
+        }
     }
 }
 
 struct TextButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        TextButtonView(labelText: "Button")
+        TextButtonView(labelText: "Button", destination: AnyView(Text("test")))
     }
 }

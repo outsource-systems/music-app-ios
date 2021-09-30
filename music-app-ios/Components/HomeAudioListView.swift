@@ -21,8 +21,7 @@ struct HomeAudioListView: View {
             ForEach(productListViewModel.productsLists, id: \.self) { productList in
                 Divider()
                 Spacer().frame(height: 20)
-                ListHeader(headerTitle: productList.productsTitle, rightLinkText: "See All")
-                HListItemView(products: productList.products)
+                ProductListView(products: productList.products, headerTitle: productList.productsTitle)
             }
             PremiumButtonView()
         }.padding(.bottom, 100)

@@ -13,7 +13,7 @@ struct PremiumRegistorView: View {
             ItemHorizonAutoScrollView().padding(.vertical, -120)
             Spacer().frame(height: 120)
             HStack {
-                Text("MicroM")
+                Text("microM")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.leading)
@@ -21,7 +21,7 @@ struct PremiumRegistorView: View {
                 Spacer()
             }
             HStack {
-                Text("アプリをご利用いただきありがとうございます😄")
+                Text("ご利用いただきありがとうございます😄")
                     .foregroundColor(Color("SubText"))
                 Spacer()
             }.padding()
