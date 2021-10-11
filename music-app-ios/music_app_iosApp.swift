@@ -9,11 +9,9 @@ import SwiftUI
 
 @main
 struct music_app_iosApp: App {
-    let productListViewModel: ProductListViewModel = ProductListViewModel()
-    let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
     var body: some Scene {
         WindowGroup {
-            MainView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+            MainView()
         }
     }
 }

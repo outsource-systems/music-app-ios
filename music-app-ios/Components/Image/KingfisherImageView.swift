@@ -1,5 +1,5 @@
 //
-//  ImageView.swift
+//  KingfisherImageView.swift
 //  music-app-ios
 //
 //  Created by Apple on 2021/10/02.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct ImageView: View {
+struct KingfisherImageView: View {
     @State var isFetchError: Bool = false
     var size: CGFloat?
     var width: CGFloat?
@@ -39,10 +39,10 @@ struct ImageView: View {
     }
 }
 
-struct ImageView_Previews: PreviewProvider {
+struct KingfisherImageView_Previews: PreviewProvider {
     static var previews: some View {
         let imageUrl = "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/Jungle%20%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=05bbd0da-749b-4912-a613-5f489ca568f5"
-        ImageView(imageUrl: imageUrl)
-        ImageView()
+        KingfisherImageView(imageUrl: imageUrl)
+        KingfisherImageView()
     }
 }

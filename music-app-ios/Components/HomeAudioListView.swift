@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct HomeAudioListView: View {
-    var productListViewModel: ProductListViewModel
-    var recommendProductViewModel: RecommendProductViewModel
+    var productListViewModel: ProductListViewModel = ProductListViewModel()
     
     var body: some View {
         VStack {
             Spacer().frame(height: 20)
-            RecommendProductView(recommendProduct: recommendProductViewModel.recommendProduct)
+            RecommendProductView()
             Spacer().frame(height: 20)
             TopItemsView()
             Spacer().frame(height: 20)
@@ -30,8 +29,6 @@ struct HomeAudioListView: View {
 
 struct HomeAudioListView_Previews: PreviewProvider {
     static var previews: some View {
-        let productListViewModel: ProductListViewModel = ProductListViewModel()
-        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
-        HomeAudioListView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+        HomeAudioListView()
     }
 }

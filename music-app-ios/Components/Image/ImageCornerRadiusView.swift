@@ -9,25 +9,16 @@ import SwiftUI
 
 struct ImageCornerRadiusView: View {
     let size: CGFloat
-    var cornerRadius: CGFloat
     var imageUrl: String?
-    var isShowShadow: Bool
-    
-    init(size: CGFloat, imageUrl: String? = nil, isShowShadow: Bool = false) {
-        self.size = size
-        self.cornerRadius = CGFloat(Int(size * 0.075))
-        self.imageUrl = imageUrl
-        self.isShowShadow = isShowShadow
-    }
+    var isShowShadow: Bool = false
 
     var body: some View {
+        let cornerRadius = CGFloat(Int(size * 0.075))
         if (imageUrl != nil) {
             if (isShowShadow) {
-                ImageContentView(url: imageUrl,
-                                 size: size).cornerRadius(cornerRadius).shadow(color: Color("Text").opacity(0.2), radius: 8, x: 0, y: 14)
+                ImageView(size: size, imageUrl: imageUrl).cornerRadius(cornerRadius).shadow(color: Color("Text").opacity(0.2), radius: 8, x: 0, y: 14)
             } else {
-                ImageContentView(url: imageUrl,
-                                 size: size).cornerRadius(cornerRadius)
+                ImageView(size: size, imageUrl: imageUrl).cornerRadius(cornerRadius)
             }
         }
     }

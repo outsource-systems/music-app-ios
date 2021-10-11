@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct RecommendProductView: View {
-    var recommendProduct: Product
-
+    let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
+    
     var body: some View {
+        let recommendProduct: Product = recommendProductViewModel.recommendProduct
         LeftImageItemView(size: 100, title: recommendProduct.productTitle, count: recommendProduct.count ?? 0, date: recommendProduct.productReleaseDate, imageUrl: recommendProduct.posterFile)
     }
 }
 
 struct RecommendProductView_Previews: PreviewProvider {
     static var previews: some View {
-        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
-        RecommendProductView(recommendProduct: recommendProductViewModel.recommendProduct)
+        RecommendProductView()
     }
 }

@@ -9,27 +9,43 @@ import SwiftUI
 
 struct ItemHorizonAutoScrollView: View {
     let size: CGFloat = 100
-
+    let topItemViewModel: TopItemViewModel = TopItemViewModel()
+    
     var body: some View {
-            HStack {
-                VStack {
-                    ForEach((0...3), id: \.self) { row in
-                        HStack {
-                            if (row % 2 == 0) {
-                                Spacer().frame(width: 70)
+        let reverseAudios = topItemViewModel.audioList.audios.reversed()
+        ZStack {
+            Image("HomeCover")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .blur(radius: 60.0, opaque: false)
+            HStack(alignment: .firstTextBaseline) {
+                VStack(alignment: .leading) {
+                    ForEach((0...2), id: \.self) { row in
+                        ScrollView(.horizontal) {
+                            HStack(alignment: .firstTextBaseline) {
+                                if (row % 2 == 0) {
+                                    ForEach(topItemViewModel.audioList.audios, id: \.self) { audio in
+                                        ImageView(size: size, imageUrl: audio.posterFile)
+                                    }
+                                } else {
+                                    ForEach(reverseAudios, id: \.self) { audio in
+                                        ImageView(size: size, imageUrl: audio.posterFile)
+                                    }
+                                    Spacer()
+                                }
                             }
-                            ForEach((0...6), id: \.self) { row in
-                                ItemSampleView(size: size, assetImageName: "HomeCover")
-                            }
-                        }
+                        }.padding(.leading, CGFloat(-70 * row))
                     }
                 }
-            }.padding(.vertical).background(gradientBackGroundColor())
+                Spacer()
+            }.padding(.vertical)
+        }
     }
 }
 
 struct ItemHorizonAutoScrollView_Previews: PreviewProvider {
     static var previews: some View {
+        ItemHorizonAutoScrollView().environment(\.colorScheme, .dark)
         ItemHorizonAutoScrollView()
     }
 }

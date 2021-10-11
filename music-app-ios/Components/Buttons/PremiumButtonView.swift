@@ -18,7 +18,7 @@ struct PremiumButtonView: View {
                 .background(gradientBackGroundColor(colorOne: Color("ButtonLabel"), colorTwo: Color("ButtonLabel1")))
                 .cornerRadius(24)
         }.padding(.vertical, 40).sheet(isPresented: self.$show) {
-            PremiumRegistorView()
+            PremiumRegistorView().background(Color("Background"))
         }
     }
 }

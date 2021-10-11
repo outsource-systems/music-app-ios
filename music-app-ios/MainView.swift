@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
-    var productListViewModel: ProductListViewModel
-    var recommendProductViewModel: RecommendProductViewModel
     var body: some View {
-        TabBarView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+        TabBarView()
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        let productListViewModel: ProductListViewModel = ProductListViewModel()
-        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
-        MainView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel).environment(\.colorScheme, .dark)
-        MainView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+        MainView().environment(\.colorScheme, .dark)
+        MainView()
     }
 }

@@ -11,7 +11,6 @@ struct ScrollMenuView: View {
     let menuItems = ["ALL", "Popular", "Hiphop", "Radio", "Classical"]
     let activeMenuItem = "ALL"
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 0) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
@@ -41,7 +40,6 @@ struct ScrollMenuView: View {
                     .padding(.horizontal)
                 }
             }
-        }
     }
 }
 

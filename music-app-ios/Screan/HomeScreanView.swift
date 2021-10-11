@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeScreanView: View {
-    var productListViewModel: ProductListViewModel
-    var recommendProductViewModel: RecommendProductViewModel
     var body: some View {
+        let bounds = UIScreen.main.bounds
+        let width = bounds.width
         NavigationView {
             ZStack {
                 Color("Background").edgesIgnoringSafeArea(.all)
@@ -20,6 +20,7 @@ struct HomeScreanView: View {
                             Image("HomeCover")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                                .frame(width: width, height: width)
                             Spacer()
                         }
                     }.overlay(
@@ -35,7 +36,7 @@ struct HomeScreanView: View {
                              .background(
                                 LinearGradient(gradient: Gradient(colors: [Color("Background"), Color("Gradient")]), startPoint: .top, endPoint: .bottom)
                              )
-                            Spacer().frame(height: 200)
+                            Spacer().frame(height: 150)
                             VStack {
                                 Spacer().frame(height: 120)
                             }.frame(maxWidth: .infinity)
@@ -55,7 +56,7 @@ struct HomeScreanView: View {
                         },
                         alignment: .top
                     )
-                    HomeAudioListView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+                    HomeAudioListView()
                 }
             }.navigationBarHidden(true)
         }.accentColor(Color("ButtonLabel"))
@@ -64,11 +65,9 @@ struct HomeScreanView: View {
 
 struct HomeScreanView_Previews: PreviewProvider {
     static var previews: some View {
-        let productListViewModel: ProductListViewModel = ProductListViewModel()
-        let recommendProductViewModel: RecommendProductViewModel = RecommendProductViewModel()
         Group {
-            HomeScreanView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel).environment(\.colorScheme, .dark)
-            HomeScreanView(productListViewModel: productListViewModel, recommendProductViewModel: recommendProductViewModel)
+            HomeScreanView().environment(\.colorScheme, .dark)
+            HomeScreanView()
         }
     }
 }
