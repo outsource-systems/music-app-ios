@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
+    
     var body: some View {
             TabView {
                 HomeScreanView()
@@ -59,8 +61,8 @@ struct TabBarView: View {
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TabBarView().environment(\.colorScheme, .dark)
-            TabBarView().environment(\.locale, .init(identifier: "ja"))
+            TabBarView().environment(\.colorScheme, .dark).environmentObject(AudioPlayerViewModel())
+            TabBarView().environment(\.locale, .init(identifier: "ja")).environmentObject(AudioPlayerViewModel())
         }
     }
 }

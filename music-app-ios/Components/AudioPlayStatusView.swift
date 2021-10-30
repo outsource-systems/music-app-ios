@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct AudioPlayStatusView: View {
+    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     @State private var showingSheet = false
+    
     var body: some View {
         Button(action: {
             self.showingSheet = true
@@ -37,7 +39,7 @@ struct AudioPlayStatusView: View {
             .background(Color("Background")).opacity(0.9)
         }.foregroundColor(Color("Text"))
         .sheet(isPresented: $showingSheet) {
-            AudioPlayScreanView()
+            AudioPlayScreanView().environmentObject(audioPlayerViewModel)
          }
     }
 }
@@ -45,8 +47,8 @@ struct AudioPlayStatusView: View {
 struct AudioPlayStatusView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AudioPlayStatusView().environment(\.colorScheme, .dark)
-            AudioPlayStatusView()
+            AudioPlayStatusView().environment(\.colorScheme, .dark).environmentObject(AudioPlayerViewModel())
+            AudioPlayStatusView().environmentObject(AudioPlayerViewModel())
         }
         .previewLayout(.fixed(width: 350, height: 70))
     }

@@ -7,30 +7,23 @@
 
 import SwiftUI
 import AVKit
-import MediaPlayer
 
 struct AudioPlayScreanView: View {
-    @ObservedObject var audioPlayScreanViewModel: AudioPlayScreanViewModel = AudioPlayScreanViewModel()
+    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     var paddingHrizontal: CGFloat = 15
-
-    init() {
-        self.audioPlayScreanViewModel.player = AVPlayer()
-        self.audioPlayScreanViewModel.initPlayer(url: self.audioPlayScreanViewModel.url)
-        self.audioPlayScreanViewModel.screen = UIScreen.main.bounds.width - (paddingHrizontal * 2)
-    }
 
     var dragGesture: some Gesture {
         DragGesture(minimumDistance: 0)
             .onChanged({ (value) in
-                if self.audioPlayScreanViewModel.player.currentItem == nil { return }
+                if self.audioPlayerViewModel.player.currentItem == nil { return }
                 // ドラックしている時
-                self.audioPlayScreanViewModel.width = value.location.x
+                self.audioPlayerViewModel.width = value.location.x
             }).onEnded({ (value) in
-                if self.audioPlayScreanViewModel.player.currentItem == nil { return }
+                if self.audioPlayerViewModel.player.currentItem == nil { return }
                 // ドラックが完了した時
-                let percent: Float64 = Float64(value.location.x / self.audioPlayScreanViewModel.screen)
-                let seekTime: CMTime = CMTimeMultiplyByFloat64(self.audioPlayScreanViewModel.player.currentItem!.duration, multiplier: percent)
-                self.audioPlayScreanViewModel.player.seek(to: seekTime)
+                let percent: Float64 = Float64(value.location.x / self.audioPlayerViewModel.screen)
+                let seekTime: CMTime = CMTimeMultiplyByFloat64(self.audioPlayerViewModel.player.currentItem!.duration, multiplier: percent)
+                self.audioPlayerViewModel.player.seek(to: seekTime)
             })
     }
     
@@ -41,7 +34,7 @@ struct AudioPlayScreanView: View {
                 .resizable()
                 .blur(radius: 120.0, opaque: false)
             VStack {
-                ItemSampleView(size: self.audioPlayScreanViewModel.screen * 0.9).padding(.top)
+                ItemSampleView(size: self.audioPlayerViewModel.screen * 0.9).padding(.top)
                 HStack {
                     Text("Title")
                         .font(.title2)
@@ -61,30 +54,30 @@ struct AudioPlayScreanView: View {
                 Spacer()
                 ZStack(alignment: .leading) {
                     Capsule().fill(Color("Text").opacity(0.2)).frame(height: 8).gesture(dragGesture)
-                    Capsule().fill(Color("Text").opacity(0.6)).frame(width: self.audioPlayScreanViewModel.width, height: 8).gesture(dragGesture)
+                    Capsule().fill(Color("Text").opacity(0.6)).frame(width: self.audioPlayerViewModel.width, height: 8).gesture(dragGesture)
                 }.padding(.horizontal, paddingHrizontal)
                 HStack {
-                    Text(verbatim: self.audioPlayScreanViewModel.playerCurrentTimeString).padding()
+                    Text(verbatim: self.audioPlayerViewModel.playerCurrentTimeString).padding()
                     Spacer()
-                    Text(verbatim: self.audioPlayScreanViewModel.playerDurationString).padding()
+                    Text(verbatim: self.audioPlayerViewModel.playerDurationString).padding()
                 }.foregroundColor(Color("Text"))
                 HStack(spacing: UIScreen.main.bounds.width / 5 - 30) {
                     Button(action: {
-                        self.audioPlayScreanViewModel.onPrev()
+                        self.audioPlayerViewModel.onPrev()
                     }) {
                         Image(systemName: "backward.fill")
                     }
                     Button(action: {
-                        if self.audioPlayScreanViewModel.playing {
-                            self.audioPlayScreanViewModel.pause()
+                        if self.audioPlayerViewModel.playing {
+                            self.audioPlayerViewModel.pause()
                         } else {
-                            self.audioPlayScreanViewModel.play()
+                            self.audioPlayerViewModel.play()
                         }
                     }) {
-                        Image(systemName: self.audioPlayScreanViewModel.playing ? "pause.fill" : "play.fill")
+                        Image(systemName: self.audioPlayerViewModel.playing ? "pause.fill" : "play.fill")
                     }
                     Button(action: {
-                        self.audioPlayScreanViewModel.onNext()
+                        self.audioPlayerViewModel.onNext()
                     }) {
                         Image(systemName: "forward.fill")
                     }
@@ -93,7 +86,7 @@ struct AudioPlayScreanView: View {
                 .font(.largeTitle)
                 HStack {
                     Image(systemName: "speaker.fill").foregroundColor(Color("Text").opacity(0.6))
-                    Slider(value: self.$audioPlayScreanViewModel.player.volume, in: 0...1)
+                    Slider(value: self.$audioPlayerViewModel.player.volume, in: 0...1)
                         .padding(.horizontal)
                         .accentColor(Color("Text").opacity(0.6))
                     Image(systemName: "speaker.wave.2.fill").foregroundColor(Color("Text").opacity(0.6))
@@ -113,7 +106,7 @@ struct AudioPlayScreanView: View {
 
 struct AudioPlayScreanView_Previews: PreviewProvider {
     static var previews: some View {
-        AudioPlayScreanView().environment(\.colorScheme, .dark)
-        AudioPlayScreanView()
+        AudioPlayScreanView().environmentObject(AudioPlayerViewModel()).environment(\.colorScheme, .dark)
+        AudioPlayScreanView().environmentObject(AudioPlayerViewModel())
     }
 }

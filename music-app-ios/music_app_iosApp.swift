@@ -11,7 +11,7 @@ import SwiftUI
 struct music_app_iosApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().environmentObject(AudioPlayerViewModel())
         }
     }
 }

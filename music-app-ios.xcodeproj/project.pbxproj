@@ -130,7 +130,7 @@
 		1884D79D2701F90300782993 /* ItemHorizonAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D79C2701F90300782993 /* ItemHorizonAutoScrollView.swift */; };
 		1884D79F2702077800782993 /* LinearGradientModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D79E2702077800782993 /* LinearGradientModule.swift */; };
 		1884D7A127021D7100782993 /* PremiumButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D7A027021D7100782993 /* PremiumButtonView.swift */; };
-		18945A33272D6BB600961086 /* AudioPlayScreanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18945A32272D6BB600961086 /* AudioPlayScreanViewModel.swift */; };
+		18945A39272D861000961086 /* AudioPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18945A38272D861000961086 /* AudioPlayerViewModel.swift */; };
 		18ADBAE126FC8576001207B3 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE026FC8576001207B3 /* ProductViewModel.swift */; };
 		18ADBAE526FCC2EB001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
 		18ADBAE626FCC300001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
@@ -236,7 +236,7 @@
 		1884D79C2701F90300782993 /* ItemHorizonAutoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHorizonAutoScrollView.swift; sourceTree = "<group>"; };
 		1884D79E2702077800782993 /* LinearGradientModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientModule.swift; sourceTree = "<group>"; };
 		1884D7A027021D7100782993 /* PremiumButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumButtonView.swift; sourceTree = "<group>"; };
-		18945A32272D6BB600961086 /* AudioPlayScreanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayScreanViewModel.swift; sourceTree = "<group>"; };
+		18945A38272D861000961086 /* AudioPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewModel.swift; sourceTree = "<group>"; };
 		18ADBAE026FC8576001207B3 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		18ADBAE426FCC2EB001207B3 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		18B4C41227005041007EB6E5 /* SampleScreanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleScreanView.swift; sourceTree = "<group>"; };
@@ -495,7 +495,7 @@
 				18ADBAE026FC8576001207B3 /* ProductViewModel.swift */,
 				18B4C42A27007969007EB6E5 /* TopItemViewModel.swift */,
 				18B4C4342700812D007EB6E5 /* LibraryMenuViewModel.swift */,
-				18945A32272D6BB600961086 /* AudioPlayScreanViewModel.swift */,
+				18945A38272D861000961086 /* AudioPlayerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -741,7 +741,6 @@
 				1855CF9626F5F86D008BE1BF /* SearchBarView.swift in Sources */,
 				1855CF9A26F619F3008BE1BF /* HListItemView.swift in Sources */,
 				1855D01B26F89A7B008BE1BF /* Lyrist.swift in Sources */,
-				18945A33272D6BB600961086 /* AudioPlayScreanViewModel.swift in Sources */,
 				18B4C4212700726F007EB6E5 /* ItemListVerticalView.swift in Sources */,
 				1855CF5226F5B944008BE1BF /* ItemSampleView.swift in Sources */,
 				1855D03B26F8DFF4008BE1BF /* ProductList.swift in Sources */,
@@ -782,6 +781,7 @@
 				18B4C4352700812D007EB6E5 /* LibraryMenuViewModel.swift in Sources */,
 				1855CF8826F5E7EA008BE1BF /* ScrollMenuView.swift in Sources */,
 				181FCE9D27061C880050EDE7 /* ProductNavigationLinkView.swift in Sources */,
+				18945A39272D861000961086 /* AudioPlayerViewModel.swift in Sources */,
 				1855CF5826F5C302008BE1BF /* AddIconView.swift in Sources */,
 				1855CFC326F63A53008BE1BF /* TextButtonView.swift in Sources */,
 				18B4C41F2700693D007EB6E5 /* ItemHorizontalView.swift in Sources */,
@@ -1010,7 +1010,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"music-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 2R8AHR37XC;
 				ENABLE_PREVIEWS = YES;
@@ -1033,7 +1033,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"music-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 2R8AHR37XC;
 				ENABLE_PREVIEWS = YES;
