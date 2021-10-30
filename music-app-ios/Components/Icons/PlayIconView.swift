@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct PlayIconView: View {
+    var size: CGFloat = 50
     var body: some View {
         Circle()
             .fill(Color.white)
-          .frame(width:50, height: 50).overlay(
+          .frame(width: size, height: size).overlay(
             Image(systemName: "play.circle.fill")
                 .resizable()
                 .renderingMode(.template)
                 .foregroundColor(.red)
-                .frame(width: 50, height: 50)
+                .frame(width: size, height: size)
         )
         
     }

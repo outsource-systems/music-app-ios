@@ -49,8 +49,8 @@ struct TabBarView: View {
             .overlay(
                 VStack {
                     Spacer()
-//                    AudioPlayStatusView()
-//                        .padding(.bottom, 48)
+                    AudioPlayStatusView()
+                        .padding(.bottom, 48)
                 }
             )
     }

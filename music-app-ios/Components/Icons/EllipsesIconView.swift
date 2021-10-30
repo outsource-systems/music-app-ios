@@ -8,30 +8,20 @@
 import SwiftUI
 
 struct EllipsesIconView: View {
-    let size: CGFloat
-    let color: Color
-    
-    init(size: CGFloat = 50, color: Color = Color("ButtonLabel")) {
-        self.size = size
-        self.color = color
-    }
+    var size: CGFloat = 50
     
     var body: some View {
-        Circle()
-            .fill(color)
-          .frame(width: size, height: size).overlay(
-            Image(systemName: "ellipsis.circle.fill")
-                .resizable()
-                .renderingMode(.template)
-                .foregroundColor(Color("ButtonBackground"))
-                .frame(width: size, height: size)
-           )
+        Image(systemName: "ellipsis.circle.fill")
+            .resizable()
+            .renderingMode(.template)
+            .foregroundColor(.gray)
+            .frame(width: size, height: size)
     }
 }
 
 struct EllipsesIconView_Previews: PreviewProvider {
     static var previews: some View {
-        EllipsesIconView().environment(\.colorScheme, .dark).background(Color.black)
+        EllipsesIconView().environment(\.colorScheme, .dark)
         EllipsesIconView()
     }
 }

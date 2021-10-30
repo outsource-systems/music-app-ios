@@ -10,13 +10,15 @@ import SwiftUI
 struct VolumeSliderView: View {
     @State private var sliderVal : Double = 0
     var body: some View {
-            HStack {
-                Image(systemName: "speaker.fill")
-                Slider(value: $sliderVal, in: 0...100)
-                    .padding(.horizontal)
-                    .accentColor(Color("Text"))
-                Image(systemName: "speaker.wave.2.fill")
-            }
+        VStack {
+                HStack {
+                    Image(systemName: "speaker.fill")
+                    Slider(value: $sliderVal, in: 0...100)
+                        .padding(.horizontal)
+                        .accentColor(Color("Text"))
+                    Image(systemName: "speaker.wave.2.fill")
+                }
+        }
     }
 }
 

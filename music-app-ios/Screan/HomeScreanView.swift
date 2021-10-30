@@ -8,57 +8,43 @@
 import SwiftUI
 
 struct HomeScreanView: View {
+    @State private var headerHidden = false
+    
     var body: some View {
         let bounds = UIScreen.main.bounds
         let width = bounds.width
         NavigationView {
-            ZStack {
-                Color("Background").edgesIgnoringSafeArea(.all)
-                ScrollView(.vertical, showsIndicators: false) {
-                    ZStack {
-                        VStack {
-                            Image("HomeCover")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: width, height: width)
-                            Spacer()
-                        }
+            ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        Image("HomeCover")
+                            .resizable()
+                            .frame(width: width, height: width)
+                            .overlay(
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        PlayIconView(size: CGFloat(width * 0.13)).padding(.trailing).padding(.top, width * 1.01)
+                                    }
+                                }
+                            )
                     }.overlay(
                         VStack {
-                            VStack {
-                                Text("microM")
+                            Spacer().frame(width: width, height: width * 0.5).background(Color("Background"))
+                            LinearGradient(gradient: Gradient(colors: [Color("Background"), Color("Gradient")]), startPoint: .top, endPoint: .bottom).frame(height: width * 0.3)
+                                .overlay(
+                                  Text("microM")
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
                                     .multilineTextAlignment(.center)
                                     .frame(alignment: .top)
-                                Spacer().frame(height: 100)
-                            }.frame(maxWidth: .infinity)
-                             .background(
-                                LinearGradient(gradient: Gradient(colors: [Color("Background"), Color("Gradient")]), startPoint: .top, endPoint: .bottom)
-                             )
-                            Spacer().frame(height: 150)
-                            VStack {
-                                Spacer().frame(height: 120)
-                            }.frame(maxWidth: .infinity)
-                            .background(
-                               LinearGradient(gradient: Gradient(colors: [Color("Gradient"), Color("Background")]), startPoint: .top, endPoint: .bottom)
-                            ).overlay(
-                                VStack {
-                                    Spacer()
-                                    HStack {
-                                        Spacer()
-                                        PlayIconView()
-                                        Spacer().frame(width: 20)
-                                    }
-                                    Spacer().frame(height: 20)
-                                }
+                                    .padding(.bottom, width * 0.2)
                             )
-                        },
-                        alignment: .top
-                    )
+                            Spacer()
+                        }.padding(.top, -(width * 0.5))
+                    ).padding(.bottom)
                     HomeAudioListView()
-                }
-            }.navigationBarHidden(true)
+                }.navigationBarHidden(true)
+                 .background(Color("Background"))
         }.accentColor(Color("ButtonLabel"))
     }
 }
