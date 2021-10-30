@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct EllipsesIconView: View {
-    var size: CGFloat = 50
+    var size: CGFloat = 150
     
     var body: some View {
-        Image(systemName: "ellipsis.circle.fill")
-            .resizable()
-            .renderingMode(.template)
-            .foregroundColor(.gray)
+        Circle()
+            .fill(Color("Text").opacity(0.2))
             .frame(width: size, height: size)
+            .overlay(
+                Image(systemName: "ellipsis")
+                    .font(.system(size: size * 0.7)).padding()
+                    .foregroundColor(.white)
+            )
     }
 }
 
 struct EllipsesIconView_Previews: PreviewProvider {
     static var previews: some View {
-        EllipsesIconView().environment(\.colorScheme, .dark)
+        EllipsesIconView().background(Color("Background")).environment(\.colorScheme, .dark)
         EllipsesIconView()
     }
 }

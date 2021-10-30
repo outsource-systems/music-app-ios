@@ -81,9 +81,6 @@
 		1855CFCF26F64480008BE1BF /* AudioPlayScreanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFCE26F64480008BE1BF /* AudioPlayScreanView.swift */; };
 		1855CFD026F64480008BE1BF /* AudioPlayScreanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFCE26F64480008BE1BF /* AudioPlayScreanView.swift */; };
 		1855CFD126F64480008BE1BF /* AudioPlayScreanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFCE26F64480008BE1BF /* AudioPlayScreanView.swift */; };
-		1855CFE326F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFE226F6F8B2008BE1BF /* VolumeSliderView.swift */; };
-		1855CFE426F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFE226F6F8B2008BE1BF /* VolumeSliderView.swift */; };
-		1855CFE526F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFE226F6F8B2008BE1BF /* VolumeSliderView.swift */; };
 		1855CFE726F6FC9F008BE1BF /* EllipsesIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFE626F6FC9F008BE1BF /* EllipsesIconView.swift */; };
 		1855CFE826F6FC9F008BE1BF /* EllipsesIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFE626F6FC9F008BE1BF /* EllipsesIconView.swift */; };
 		1855CFE926F6FC9F008BE1BF /* EllipsesIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855CFE626F6FC9F008BE1BF /* EllipsesIconView.swift */; };
@@ -133,6 +130,7 @@
 		1884D79D2701F90300782993 /* ItemHorizonAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D79C2701F90300782993 /* ItemHorizonAutoScrollView.swift */; };
 		1884D79F2702077800782993 /* LinearGradientModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D79E2702077800782993 /* LinearGradientModule.swift */; };
 		1884D7A127021D7100782993 /* PremiumButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1884D7A027021D7100782993 /* PremiumButtonView.swift */; };
+		18945A33272D6BB600961086 /* AudioPlayScreanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18945A32272D6BB600961086 /* AudioPlayScreanViewModel.swift */; };
 		18ADBAE126FC8576001207B3 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE026FC8576001207B3 /* ProductViewModel.swift */; };
 		18ADBAE526FCC2EB001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
 		18ADBAE626FCC300001207B3 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADBAE426FCC2EB001207B3 /* ProductView.swift */; };
@@ -213,7 +211,6 @@
 		1855CFC226F63A53008BE1BF /* TextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonView.swift; sourceTree = "<group>"; };
 		1855CFCA26F63CFC008BE1BF /* ListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeader.swift; sourceTree = "<group>"; };
 		1855CFCE26F64480008BE1BF /* AudioPlayScreanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayScreanView.swift; sourceTree = "<group>"; };
-		1855CFE226F6F8B2008BE1BF /* VolumeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSliderView.swift; sourceTree = "<group>"; };
 		1855CFE626F6FC9F008BE1BF /* EllipsesIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipsesIconView.swift; sourceTree = "<group>"; };
 		1855CFF026F75343008BE1BF /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		1855CFF426F75598008BE1BF /* AudiosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiosViewModel.swift; sourceTree = "<group>"; };
@@ -239,6 +236,7 @@
 		1884D79C2701F90300782993 /* ItemHorizonAutoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHorizonAutoScrollView.swift; sourceTree = "<group>"; };
 		1884D79E2702077800782993 /* LinearGradientModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradientModule.swift; sourceTree = "<group>"; };
 		1884D7A027021D7100782993 /* PremiumButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumButtonView.swift; sourceTree = "<group>"; };
+		18945A32272D6BB600961086 /* AudioPlayScreanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayScreanViewModel.swift; sourceTree = "<group>"; };
 		18ADBAE026FC8576001207B3 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		18ADBAE426FCC2EB001207B3 /* ProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		18B4C41227005041007EB6E5 /* SampleScreanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleScreanView.swift; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 				1855CF8326F5E215008BE1BF /* HomeAudioListView.swift */,
 				1855CF8726F5E7EA008BE1BF /* ScrollMenuView.swift */,
 				1855CF9526F5F86D008BE1BF /* SearchBarView.swift */,
-				1855CFE226F6F8B2008BE1BF /* VolumeSliderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -498,6 +495,7 @@
 				18ADBAE026FC8576001207B3 /* ProductViewModel.swift */,
 				18B4C42A27007969007EB6E5 /* TopItemViewModel.swift */,
 				18B4C4342700812D007EB6E5 /* LibraryMenuViewModel.swift */,
+				18945A32272D6BB600961086 /* AudioPlayScreanViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -743,8 +741,8 @@
 				1855CF9626F5F86D008BE1BF /* SearchBarView.swift in Sources */,
 				1855CF9A26F619F3008BE1BF /* HListItemView.swift in Sources */,
 				1855D01B26F89A7B008BE1BF /* Lyrist.swift in Sources */,
+				18945A33272D6BB600961086 /* AudioPlayScreanViewModel.swift in Sources */,
 				18B4C4212700726F007EB6E5 /* ItemListVerticalView.swift in Sources */,
-				1855CFE326F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */,
 				1855CF5226F5B944008BE1BF /* ItemSampleView.swift in Sources */,
 				1855D03B26F8DFF4008BE1BF /* ProductList.swift in Sources */,
 				18B4C43327008102007EB6E5 /* LibraryMenuItem.swift in Sources */,
@@ -799,7 +797,6 @@
 				1855CF3326F4FA12008BE1BF /* SettingScreanView.swift in Sources */,
 				18ADBAE726FCC300001207B3 /* ProductView.swift in Sources */,
 				1855CF2B26F4F9DF008BE1BF /* BlogScreanView.swift in Sources */,
-				1855CFE426F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */,
 				1855CF7D26F5D467008BE1BF /* AudioListItemView.swift in Sources */,
 				1855CF5926F5C302008BE1BF /* AddIconView.swift in Sources */,
 				1855CF8126F5DB30008BE1BF /* AudioPlayStatusView.swift in Sources */,
@@ -835,7 +832,6 @@
 				1855CF3426F4FA12008BE1BF /* SettingScreanView.swift in Sources */,
 				18ADBAE626FCC300001207B3 /* ProductView.swift in Sources */,
 				1855CF2C26F4F9DF008BE1BF /* BlogScreanView.swift in Sources */,
-				1855CFE526F6F8B2008BE1BF /* VolumeSliderView.swift in Sources */,
 				1855CF7E26F5D467008BE1BF /* AudioListItemView.swift in Sources */,
 				1855CF5A26F5C302008BE1BF /* AddIconView.swift in Sources */,
 				1855CF8226F5DB30008BE1BF /* AudioPlayStatusView.swift in Sources */,

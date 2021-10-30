@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct VolumeSliderView: View {
-    @State private var sliderVal : Double = 0
+    @Binding var volume: Double
     var body: some View {
         VStack {
                 HStack {
                     Image(systemName: "speaker.fill")
-                    Slider(value: $sliderVal, in: 0...100)
+                    Slider(value: self.$volume, in: 0...1)
                         .padding(.horizontal)
                         .accentColor(Color("Text"))
                     Image(systemName: "speaker.wave.2.fill")
@@ -23,8 +23,9 @@ struct VolumeSliderView: View {
 }
 
 struct VolumeSliderView_Previews: PreviewProvider {
+    @State static var volume = 0.0
     static var previews: some View {
-        VolumeSliderView().background(Color.black).environment(\.colorScheme, .dark)
-        VolumeSliderView()
+        VolumeSliderView(volume: $volume).background(Color.black).environment(\.colorScheme, .dark)
+        VolumeSliderView(volume: $volume)
     }
 }

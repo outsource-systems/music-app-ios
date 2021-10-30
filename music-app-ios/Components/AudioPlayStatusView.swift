@@ -36,8 +36,7 @@ struct AudioPlayStatusView: View {
             .padding(.vertical, 7)
             .background(Color("Background")).opacity(0.9)
         }.foregroundColor(Color("Text"))
-        .sheet(isPresented: $showingSheet,
-                onDismiss: {print("画面を閉じた")}) {
+        .sheet(isPresented: $showingSheet) {
             AudioPlayScreanView()
          }
     }
