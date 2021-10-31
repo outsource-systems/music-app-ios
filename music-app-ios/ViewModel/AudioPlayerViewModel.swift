@@ -21,14 +21,22 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     @Published var playerDurationString: String = "0:00"
     @Published var observer: NSKeyValueObservation?
     @Published var timer: Timer!
-    @Published var url: URL = URL(string: "https://firebasestorage.googleapis.com/v0/b/origify-dev.appspot.com/o/black.mp3?alt=media&token=ea134aac-bde3-496a-bc2e-30f77b23f3fd")!
+    @Published var url: URL = URL(string: "https://firebasestorage.googleapis.com/v0/b/origify-dev-b9460.appspot.com/o/y2mate.com%20-%20microM%20%20%E4%BF%BA%E3%82%89%E3%81%AECLASSIC%20FtRENZANNASUKA%20Official%20Music%20Video.mp3?alt=media&token=80b8011c-970e-40b7-983f-363e93de1ddd")!
     @Published var screen: CGFloat = UIScreen.main.bounds.width - (30)
     @Published var volume: Float = 0.5
+    @Published var currentAudio: Audio!
+    @Published var currentAudioList: [Audio]!
+    @Published var isShowPlayer = false
     var paddingHrizontal: CGFloat = 15
+    
+    init(currentAudio: Audio) {
+        super.init()
+        self.currentAudio = currentAudio
+        initPlayer(url: URL(string: currentAudio.itemFile!)!)
+    }
     
     override init() {
         super.init()
-        initPlayer(url: self.url)
     }
 
     func initPlayer(url: URL) {
@@ -45,23 +53,21 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
                 self.playerDurationString = self.CMTimeToTimeString(cmTime: playerItem.duration)
             }
         })
+        self.width = 0
     }
 
     func play() {
-        print("play")
-        if self.player.currentItem != nil {
-            print("currentItem is fine")
-            self.player.play()
+        if self.player.currentItem == nil { return }
+        self.player.play()
+        if self.player.currentItem?.status == .readyToPlay {
+            self.playing = true
+        }
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
             if self.player.currentItem?.status == .readyToPlay {
                 self.playing = true
-            }
-            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-                if self.player.currentItem?.status == .readyToPlay {
-                    self.playing = true
-                    let value = CMTimeGetSeconds(self.player.currentTime()) / CMTimeGetSeconds(self.player.currentItem!.duration)
-                    self.width = self.screen * CGFloat(value)
-                    self.playerCurrentTimeString = self.CMTimeToTimeString(cmTime: (self.player.currentTime()))
-                }
+                let value = CMTimeGetSeconds(self.player.currentTime()) / CMTimeGetSeconds(self.player.currentItem!.duration)
+                self.width = self.screen * CGFloat(value)
+                self.playerCurrentTimeString = self.CMTimeToTimeString(cmTime: (self.player.currentTime()))
             }
         }
     }
@@ -71,13 +77,19 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
         self.playing = false
         self.timer?.invalidate()
     }
-
-    func changeSong(url: URL) {
+    
+    func setCurrentAudio(currentAudio: Audio) {
         self.pause()
-        let playerItem = AVPlayerItem(url: url)
-        self.player.replaceCurrentItem(with: playerItem)
-        self.width = 0
+        self.currentAudio = currentAudio
+        initPlayer(url: URL(string: currentAudio.itemFile!)!)
         self.play()
+        self.isShowPlayer = true
+    }
+    
+    func showPlayer() {
+        if self.player.currentItem != nil {
+            self.isShowPlayer = true
+        }
     }
 
     func onPrev() {

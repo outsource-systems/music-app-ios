@@ -13,7 +13,7 @@ struct ItemListVerticalView: View {
     var body: some View {
         ScrollView {
             ForEach(audios) {audio in
-                ItemHorizontalView(size: 50, productTitle: "album", relaseDate: "2020", title: audio.title, imageUrl: audio.posterFile).frame(width: itemWidth).frame(width: itemWidth)
+                ItemHorizontalView(size: 50, audio: audio).frame(width: itemWidth).frame(width: itemWidth)
             }.padding(.vertical)
         }
     }

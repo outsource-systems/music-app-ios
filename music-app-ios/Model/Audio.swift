@@ -18,4 +18,5 @@ struct Audio: Hashable, Codable, Identifiable {
     var posterFile: String
     var isFavorite: Bool
     var diskNumber: Int?
+    var itemFile: String?
 }

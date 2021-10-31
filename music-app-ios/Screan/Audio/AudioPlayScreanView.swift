@@ -28,21 +28,22 @@ struct AudioPlayScreanView: View {
     }
     
     var body: some View {
+        let audio = audioPlayerViewModel.currentAudio
+        let artistName = audio?.artists.map { $0.name }.joined(separator: " & ")
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
-            Image("SampleAudioImage")
-                .resizable()
+            ImageView(imageUrl: audio?.posterFile)
                 .blur(radius: 120.0, opaque: false)
             VStack {
-                ItemSampleView(size: self.audioPlayerViewModel.screen * 0.9).padding(.top)
+                ImageCornerRadiusView(size: self.audioPlayerViewModel.screen * 0.9, imageUrl: audio?.posterFile).padding(.vertical)
                 HStack {
-                    Text("Title")
+                    Text(audio!.title)
                         .font(.title2)
                         .fontWeight(.bold)
                     Spacer()
                 }.padding(.horizontal, 40)
                 HStack {
-                    Text("Artist")
+                    Text(artistName!)
                         .font(.title2)
                     Spacer()
                 }.padding(.horizontal, 40).overlay(
@@ -105,8 +106,12 @@ struct AudioPlayScreanView: View {
 }
 
 struct AudioPlayScreanView_Previews: PreviewProvider {
+    static let topItemViewModel: TopItemViewModel = TopItemViewModel()
+    static let audio: Audio = topItemViewModel.audioList.audios[0]
+    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudio: audio)
+    
     static var previews: some View {
-        AudioPlayScreanView().environmentObject(AudioPlayerViewModel()).environment(\.colorScheme, .dark)
-        AudioPlayScreanView().environmentObject(AudioPlayerViewModel())
+        AudioPlayScreanView().environmentObject(audioPlayerViewModel).environment(\.colorScheme, .dark)
+        AudioPlayScreanView().environmentObject(audioPlayerViewModel)
     }
 }
