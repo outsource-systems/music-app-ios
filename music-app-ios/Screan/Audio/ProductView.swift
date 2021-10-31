@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ProductView: View {
-    let product: Product
+    // TODO Productを引数で渡すようにする
+    var product: Product = ProductViewModel().product
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
@@ -23,7 +24,7 @@ struct ProductView: View {
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        let productViewModel: ProductViewModel = ProductViewModel()
-        ProductView(product: productViewModel.product)
+        // let productViewModel: ProductViewModel = ProductViewModel()
+        ProductView()
     }
 }

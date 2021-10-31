@@ -14,7 +14,7 @@ struct ProductItemListView: View {
             Color("Background").edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
                 ForEach(items, id: \.self) { item in
-                    AudioListItemView(title: item.title, number: item.diskNumber ?? 0)
+                    ListItemView(audio: item)
                 }
             }
             .padding(.top, 30)

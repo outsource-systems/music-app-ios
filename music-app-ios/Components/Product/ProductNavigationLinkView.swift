@@ -11,7 +11,7 @@ struct ProductNavigationLinkView: View {
     var product: Product
     var size: CGFloat = 150
     var body: some View {
-        NavigationLink(destination: ProductView(product: product).toolbar {
+        NavigationLink(destination: ProductView().toolbar {
             ToolbarItem(placement: .navigationBarTrailing){
                                 Button(action: {}) {
                                     HStack {

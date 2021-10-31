@@ -21,7 +21,7 @@ struct HListItemView: View {
                     }
                 } else if (products != nil) {
                     ForEach(products ?? [], id: \.self) { product in
-                        NavigationLink(destination: ProductView(product: productViewModel.product).toolbar {
+                        NavigationLink(destination: ProductView().toolbar {
                             ToolbarItem(placement: .navigationBarTrailing){
                                                 Button(action: {}) {
                                                     HStack {
