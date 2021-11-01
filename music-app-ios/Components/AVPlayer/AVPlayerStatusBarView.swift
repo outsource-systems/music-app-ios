@@ -1,13 +1,13 @@
 //
-//  AudioPlayStatusView.swift
+//  AVPlayerStatusBarView.swift
 //  music-app-ios
 //
-//  Created by Apple on 2021/09/18.
+//  Created by Apple on 2021/11/01.
 //
 
 import SwiftUI
 
-struct AudioPlayStatusView: View {
+struct AVPlayerStatusBarView: View {
     @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     @State private var showingSheet = false
     
@@ -26,8 +26,13 @@ struct AudioPlayStatusView: View {
                         Image(systemName: audioPlayerViewModel.playing ? "pause.fill" : "play.fill")
                             .font(.system(size: 21, weight: .regular, design: .default))
                     }
-                    Image(systemName: "forward.fill")
-                        .font(.system(size: 21, weight: .regular, design: .default))
+                    
+                    Button(action: {
+                        self.audioPlayerViewModel.onNext()
+                    }) {
+                        Image(systemName: "forward.fill")
+                            .font(.system(size: 21, weight: .regular, design: .default))
+                    }
                 }
             }
             .padding(.horizontal, 20)
@@ -40,17 +45,17 @@ struct AudioPlayStatusView: View {
     }
 }
 
-struct AudioPlayStatusView_Previews: PreviewProvider {
+struct AVPlayerStatusBarView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
     static let audio: Audio = topItemViewModel.audioList.audios[0]
-    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudio: audio)
+    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.audioList.audios, currentAudioIndex: 0)
     
     static var previews: some View {
         Group {
-            AudioPlayStatusView().environment(\.colorScheme, .dark).environmentObject(audioPlayerViewModel)
-            AudioPlayStatusView().environment(\.colorScheme, .dark).environmentObject(AudioPlayerViewModel())
-            AudioPlayStatusView().environmentObject(audioPlayerViewModel)
-            AudioPlayStatusView().environmentObject(AudioPlayerViewModel())
+            AVPlayerStatusBarView().environment(\.colorScheme, .dark).environmentObject(audioPlayerViewModel)
+            AVPlayerStatusBarView().environment(\.colorScheme, .dark).environmentObject(AudioPlayerViewModel())
+            AVPlayerStatusBarView().environmentObject(audioPlayerViewModel)
+            AVPlayerStatusBarView().environmentObject(AudioPlayerViewModel())
         }
         .previewLayout(.fixed(width: 350, height: 70))
     }

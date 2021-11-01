@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct ItemHorizontalView: View {
-    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
-    var size: CGFloat = 50
     var audio: Audio
+    var size: CGFloat = 50
     var productTitle: String = "Album"
     var relaseDate: String = "2020"
     
     var body: some View {
-        Button(action: {
-            audioPlayerViewModel.setCurrentAudio(currentAudio: audio)
-        }) {
             VStack(spacing: 3) {
                 HStack {
                     Spacer().frame(width: size).padding(.horizontal, 5)
@@ -48,7 +44,6 @@ struct ItemHorizontalView: View {
                     }
                 }.padding(.vertical, 3).padding(.leading, 5)
             }
-        }.accentColor(Color("Text"))
     }
 }
 

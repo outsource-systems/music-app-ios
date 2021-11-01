@@ -15,37 +15,39 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     @Published var player: AVPlayer = AVPlayer()
     @Published var playerItem: AVPlayerItem!
     @Published var width: CGFloat = 0
-    @Published var finish: Bool = false
     @Published var playing: Bool = false
     @Published var playerCurrentTimeString: String = "0:00"
     @Published var playerDurationString: String = "0:00"
     @Published var observer: NSKeyValueObservation?
     @Published var timer: Timer!
-    @Published var url: URL = URL(string: "https://firebasestorage.googleapis.com/v0/b/origify-dev-b9460.appspot.com/o/y2mate.com%20-%20microM%20%20%E4%BF%BA%E3%82%89%E3%81%AECLASSIC%20FtRENZANNASUKA%20Official%20Music%20Video.mp3?alt=media&token=80b8011c-970e-40b7-983f-363e93de1ddd")!
     @Published var screen: CGFloat = UIScreen.main.bounds.width - (30)
     @Published var volume: Float = 0.5
     @Published var currentAudio: Audio!
     @Published var currentAudioList: [Audio]!
+    @Published var totalAudioList: [Audio]!
+    @Published var totalAudioIndex: Int!
     @Published var isShowPlayer = false
+    @Published var playImageSize: CGFloat! = UIScreen.main.bounds.width * 0.8
+    @Published var pauseImageSize: CGFloat! = UIScreen.main.bounds.width * 0.65
+    @Published var isShowList: Bool = false
     var paddingHrizontal: CGFloat = 15
+    var assetKeys = ["playable", "hasProtectedContent"]
     
-    init(currentAudio: Audio) {
+    init(currentAudioList: [Audio], currentAudioIndex: Int) {
         super.init()
-        self.currentAudio = currentAudio
-        initPlayer(url: URL(string: currentAudio.itemFile!)!)
+        self.currentAudioList = currentAudioList
+        self.totalAudioIndex = currentAudioIndex
+        self.currentAudio = self.currentAudioList[self.totalAudioIndex]
+        self.replasePlayer(url: URL(string: self.currentAudio.itemFile!)!)
     }
     
     override init() {
         super.init()
     }
-
-    func initPlayer(url: URL) {
-        let assetKeys = [
-                "playable",
-                "hasProtectedContent"
-            ]
+    
+    func replasePlayer(url: URL)  {
         let asset = AVAsset(url: url)
-        self.playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: assetKeys)
+        self.playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: self.assetKeys)
         self.player = AVPlayer(playerItem: self.playerItem)
         self.observer = self.playerItem.observe(\.status, options: [.new, .old], changeHandler: { (playerItem, _) in
             if playerItem.status == .readyToPlay {
@@ -78,12 +80,20 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
         self.timer?.invalidate()
     }
     
-    func setCurrentAudio(currentAudio: Audio) {
+    func setCurrentAudio(currentAudioList: [Audio], currentAudioIndex: Int) {
+        self.currentAudioList = currentAudioList
+        self.totalAudioList = currentAudioList
+        self.totalAudioIndex = currentAudioIndex
+        self.isShowPlayer = true
+        setCurrentAudioFromAudio(currentAudio: currentAudioList[currentAudioIndex])
+        // TODO: 履歴一覧と自動再生一覧を取得してtotalAudioListに入れる
+    }
+    
+    func setCurrentAudioFromAudio(currentAudio: Audio) {
         self.pause()
         self.currentAudio = currentAudio
-        initPlayer(url: URL(string: currentAudio.itemFile!)!)
+        replasePlayer(url: URL(string: currentAudio.itemFile!)!)
         self.play()
-        self.isShowPlayer = true
     }
     
     func showPlayer() {
@@ -93,9 +103,13 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     }
 
     func onPrev() {
+        if (self.playerItem == nil) { return }
         // 3秒以内の場合
         if CMTimeGetSeconds(self.player.currentTime()) <= 3 {
             // 前の曲
+            if self.totalAudioIndex == 0 { return } // 前の曲がない場合、処理を止める
+            self.totalAudioIndex = self.totalAudioIndex - 1
+            setCurrentAudioFromAudio(currentAudio: self.totalAudioList[self.totalAudioIndex])
         } else {
             // 再生中の音楽の時間を0にする
             self.player.seek(to: CMTime.zero)
@@ -103,7 +117,9 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     }
 
     func onNext() {
-        print("next")
+        if (self.playerItem == nil || self.totalAudioIndex == (self.totalAudioList.count - 1)) { return } // 次の曲がない場合は、処理を止める
+        self.totalAudioIndex = self.totalAudioIndex + 1
+        setCurrentAudioFromAudio(currentAudio: self.totalAudioList[self.totalAudioIndex])
     }
 
     // CMTime型の時間を00:00形式の文字列の時間に変更する
@@ -120,9 +136,8 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
         return "\(String(format: "%02d", hour)):\(String(format: "%02d", minits)):\(String(format: "%02d", second))"
     }
 
+    // 音楽が終了した時
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        self.width = 0
-        self.playing = false
-        // TODO: 次の曲にする
+        onNext()
     }
 }

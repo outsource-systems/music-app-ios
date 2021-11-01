@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ProductItemListView: View {
+    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     var items: [Audio]
     var body: some View {
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
-                ForEach(items, id: \.self) { item in
+                ForEach(Array(items.enumerated()), id: \.offset) { index, item in
+                    Button(action: {
+                        audioPlayerViewModel.setCurrentAudio(currentAudioList: items, currentAudioIndex: index)
+                    }) {
                     ListItemView(audio: item)
+                    }.accentColor(Color("Text"))
                 }
             }
             .padding(.top, 30)
@@ -25,7 +30,7 @@ struct ProductItemListView: View {
 struct ProductItemListView_Previews: PreviewProvider {
     static var previews: some View {
         let productViewModel: ProductViewModel = ProductViewModel()
-        ProductItemListView(items: productViewModel.product.audios ?? []).environment(\.colorScheme, .dark)
-        ProductItemListView(items: productViewModel.product.audios ?? [])
+        ProductItemListView(items: productViewModel.product.audios ?? []).environment(\.colorScheme, .dark).environmentObject(AudioPlayerViewModel())
+        ProductItemListView(items: productViewModel.product.audios ?? []).environmentObject(AudioPlayerViewModel())
     }
 }

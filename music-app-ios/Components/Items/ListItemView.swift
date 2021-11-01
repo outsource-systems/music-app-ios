@@ -8,13 +8,9 @@
 import SwiftUI
 
 struct ListItemView: View {
-    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     var audio: Audio
     
     var body: some View {
-        Button(action: {
-            audioPlayerViewModel.setCurrentAudio(currentAudio: audio)
-        }) {
             VStack {
                 Rectangle()
                     .frame(height: 1)
@@ -45,13 +41,13 @@ struct ListItemView: View {
                 .frame(height: 47)
                 .clipped()
             }
-        }.accentColor(Color("Text"))
     }
 }
 
 struct ListItemView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
     static let audio: Audio = topItemViewModel.audioList.audios[0]
+    static let audios: [Audio] = topItemViewModel.audioList.audios
     static var previews: some View {
         ListItemView(audio: audio).environment(\.colorScheme, .dark).background(Color(.black))
         ListItemView(audio: audio)

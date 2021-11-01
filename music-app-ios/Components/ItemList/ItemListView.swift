@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemListView: View {
+    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     let headerTitle: String
     let rightLinkText: String
     let audios: [Audio]
@@ -20,9 +21,13 @@ struct ItemListView: View {
             ListHeader(headerTitle: headerTitle, rightLinkText: rightLinkText, rightLinkDestination: rightLinkDestination)
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows, alignment: .top) {
-                    ForEach(audios, id: \.self) { audio in
-                        ItemHorizontalView(size: 50, audio: audio).frame(width: itemWidth)
-                        }.accentColor(Color("Text"))
+                    ForEach(Array(audios.enumerated()), id: \.offset) { index, audio in
+                        Button(action: {
+                            audioPlayerViewModel.setCurrentAudio(currentAudioList: audios, currentAudioIndex: index)
+                        }) {
+                            ItemHorizontalView(audio: audio).frame(width: itemWidth)
+                            }.accentColor(Color("Text"))
+                        }
                 }
             }
         }

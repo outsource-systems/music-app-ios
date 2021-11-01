@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ItemListVerticalView: View {
+    @EnvironmentObject var audioPlayerViewModel: AudioPlayerViewModel
     let audios: [Audio]
     let itemWidth: CGFloat = 390
     var body: some View {
         ScrollView {
-            ForEach(audios) {audio in
-                ItemHorizontalView(size: 50, audio: audio).frame(width: itemWidth).frame(width: itemWidth)
+            ForEach(Array(audios.enumerated()), id: \.offset) { index, audio in
+                Button(action: {
+                    audioPlayerViewModel.setCurrentAudio(currentAudioList: audios, currentAudioIndex: index)
+                }) {
+                ItemHorizontalView(audio: audio).frame(width: itemWidth).frame(width: itemWidth)
+                }.accentColor(Color("Text"))
             }.padding(.vertical)
         }
     }
