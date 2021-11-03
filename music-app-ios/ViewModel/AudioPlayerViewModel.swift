@@ -29,9 +29,15 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     @Published var isShowPlayer = false
     @Published var playImageSize: CGFloat! = UIScreen.main.bounds.width * 0.8
     @Published var pauseImageSize: CGFloat! = UIScreen.main.bounds.width * 0.65
-    @Published var isShowList: Bool = false
+    @Published var currentPlayerViewType: PlayerViewType = .main
     var paddingHrizontal: CGFloat = 15
     var assetKeys = ["playable", "hasProtectedContent"]
+    
+    enum  PlayerViewType: String {
+        case main = "main"
+        case list = "list"
+        case lyrics = "lyrics"
+    }
     
     init(currentAudioList: [Audio], currentAudioIndex: Int) {
         super.init()
@@ -43,6 +49,11 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     
     override init() {
         super.init()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+        } catch(let error) {
+            print(error.localizedDescription)
+        }
     }
     
     func replasePlayer(url: URL)  {
@@ -139,5 +150,14 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     // 音楽が終了した時
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         onNext()
+    }
+    
+    func changeCurrentPlayerViewType(type: PlayerViewType) {
+        // 同じtypeに変更しようとした場合、mainに戻る
+        if (self.currentPlayerViewType == type) {
+            self.currentPlayerViewType = .main
+            return
+        }
+        self.currentPlayerViewType = type
     }
 }

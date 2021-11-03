@@ -15,7 +15,7 @@ struct AVPlayerButtonMenuView: View {
             Spacer()
             Image(systemName: "quote.bubble")
             Spacer()
-            Button(action: { self.audioPlayerViewModel.isShowList.toggle() }) {
+            Button(action: { self.audioPlayerViewModel.changeCurrentPlayerViewType(type: .list) }) {
                 Image(systemName: "list.dash")
             }.accentColor(Color("Text"))
             Spacer()

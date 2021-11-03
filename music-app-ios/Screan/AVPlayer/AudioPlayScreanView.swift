@@ -21,19 +21,19 @@ struct AudioPlayScreanView: View {
                 .blur(radius: 120.0, opaque: false)
             VStack {
                 VStack {
-                    if self.audioPlayerViewModel.isShowList {
+                    if self.audioPlayerViewModel.currentPlayerViewType.rawValue == "main" {
+                        VStack {
+                            ImageCornerRadiusView(size: self.audioPlayerViewModel.playing ? self.audioPlayerViewModel.playImageSize : self.audioPlayerViewModel.pauseImageSize, imageUrl: audio?.posterFile).padding(.vertical).animation(.default)
+                        }
+                    } else if self.audioPlayerViewModel.currentPlayerViewType.rawValue == "list" {
                         ScrollView {
                             ForEach(Array(audioPlayerViewModel.currentAudioList.enumerated()), id: \.offset) { index, audio in
                                 Button(action: {
-                                    audioPlayerViewModel.setCurrentAudio(currentAudioList: audioPlayerViewModel.currentAudioList, currentAudioIndex: index)
+                                    audioPlayerViewModel.setCurrentAudioFromAudio(currentAudio: audio)
                                 }) {
                                     ItemHorizontalView(audio: audio)
                                 }.accentColor(Color("Text"))
                             }
-                        }
-                    } else {
-                        VStack {
-                            ImageCornerRadiusView(size: self.audioPlayerViewModel.playing ? self.audioPlayerViewModel.playImageSize : self.audioPlayerViewModel.pauseImageSize, imageUrl: audio?.posterFile).padding(.vertical).animation(.default)
                         }
                     }
                 }.frame(height: self.audioPlayerViewModel.screen).animation(.default)

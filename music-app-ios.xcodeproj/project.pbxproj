@@ -17,6 +17,7 @@
 		181D1B01273029810047DFC5 /* AVPlayerVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D1B00273029810047DFC5 /* AVPlayerVolumeView.swift */; };
 		181D1B0427302AA00047DFC5 /* AVPlayerTImeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D1B0327302AA00047DFC5 /* AVPlayerTImeControlView.swift */; };
 		181D1B0627302C330047DFC5 /* AVPlayerStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D1B0527302C330047DFC5 /* AVPlayerStatusBarView.swift */; };
+		181D1B0827322FFF0047DFC5 /* PlayerViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D1B0727322FFF0047DFC5 /* PlayerViewType.swift */; };
 		181FCE9527060F300050EDE7 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE9427060F300050EDE7 /* ViewRouter.swift */; };
 		181FCE99270619D20050EDE7 /* ProductVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE98270619D20050EDE7 /* ProductVListView.swift */; };
 		181FCE9B27061A580050EDE7 /* ProductHListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FCE9A27061A580050EDE7 /* ProductHListView.swift */; };
@@ -185,6 +186,7 @@
 		181D1B00273029810047DFC5 /* AVPlayerVolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerVolumeView.swift; sourceTree = "<group>"; };
 		181D1B0327302AA00047DFC5 /* AVPlayerTImeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerTImeControlView.swift; sourceTree = "<group>"; };
 		181D1B0527302C330047DFC5 /* AVPlayerStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerStatusBarView.swift; sourceTree = "<group>"; };
+		181D1B0727322FFF0047DFC5 /* PlayerViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewType.swift; sourceTree = "<group>"; };
 		181FCE9427060F300050EDE7 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		181FCE98270619D20050EDE7 /* ProductVListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVListView.swift; sourceTree = "<group>"; };
 		181FCE9A27061A580050EDE7 /* ProductHListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHListView.swift; sourceTree = "<group>"; };
@@ -376,6 +378,14 @@
 			path = AVPlayer;
 			sourceTree = "<group>";
 		};
+		181D1B0927323D790047DFC5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1855CF8326F5E215008BE1BF /* HomeAudioListView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		181FCE9E27061DBB0050EDE7 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +412,7 @@
 		1855CF3526F4FABE008BE1BF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				181D1B0927323D790047DFC5 /* Home */,
 				181D1AFB273028D10047DFC5 /* AVPlayer */,
 				181FCE9E27061DBB0050EDE7 /* List */,
 				18B4C41D27006715007EB6E5 /* Item */,
@@ -411,7 +422,6 @@
 				1855CF6926F5CDCC008BE1BF /* Buttons */,
 				1855CF5626F5B97F008BE1BF /* Icons */,
 				1855CF5526F5B969008BE1BF /* Items */,
-				1855CF8326F5E215008BE1BF /* HomeAudioListView.swift */,
 				1855CF8726F5E7EA008BE1BF /* ScrollMenuView.swift */,
 				1855CF9526F5F86D008BE1BF /* SearchBarView.swift */,
 			);
@@ -487,6 +497,7 @@
 				1855D03A26F8DFF4008BE1BF /* ProductList.swift */,
 				1855D03E26F8E070008BE1BF /* AudioList.swift */,
 				18B4C43227008102007EB6E5 /* LibraryMenuItem.swift */,
+				181D1B0727322FFF0047DFC5 /* PlayerViewType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -755,6 +766,7 @@
 				1855D02326F89AB9008BE1BF /* Artist.swift in Sources */,
 				18ADBAE526FCC2EB001207B3 /* ProductView.swift in Sources */,
 				1855D05326FA326D008BE1BF /* ProductListViewModel.swift in Sources */,
+				181D1B0827322FFF0047DFC5 /* PlayerViewType.swift in Sources */,
 				1855D01F26F89AA1008BE1BF /* Composer.swift in Sources */,
 				1855CF2626F4F9BC008BE1BF /* SearchScreanView.swift in Sources */,
 				1855CFA226F62B09008BE1BF /* ImageCornerRadiusView.swift in Sources */,

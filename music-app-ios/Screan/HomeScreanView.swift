@@ -23,7 +23,11 @@ struct HomeScreanView: View {
                                 VStack {
                                     HStack {
                                         Spacer()
-                                        PlayIconView(size: CGFloat(width * 0.13)).padding(.trailing).padding(.top, width * 1.01)
+                                        Button(action: {
+                                            
+                                        }) {
+                                            PlayIconView(size: CGFloat(width * 0.13))
+                                        }.padding(.trailing).padding(.top, width * 1.01)
                                     }
                                 }
                             )
