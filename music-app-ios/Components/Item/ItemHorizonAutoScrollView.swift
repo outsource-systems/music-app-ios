@@ -25,11 +25,11 @@ struct ItemHorizonAutoScrollView: View {
                             HStack(alignment: .firstTextBaseline) {
                                 if (row % 2 == 0) {
                                     ForEach(topItemViewModel.audioList.audios, id: \.self) { audio in
-                                        ImageView(size: size, imageUrl: audio.posterFile)
+                                        ImageView(size: size, imageUrl: audio.posterUrl)
                                     }
                                 } else {
                                     ForEach(reverseAudios, id: \.self) { audio in
-                                        ImageView(size: size, imageUrl: audio.posterFile)
+                                        ImageView(size: size, imageUrl: audio.posterUrl)
                                     }
                                     Spacer()
                                 }

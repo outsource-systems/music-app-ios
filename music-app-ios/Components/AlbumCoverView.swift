@@ -11,7 +11,7 @@ struct AlbumCoverView: View {
     var imageUrl: String
     var title: String
     var artists: [Artist]
-    var genre: String
+    var category: String
     var releaseDate: String
     
     var body: some View {
@@ -25,7 +25,7 @@ struct AlbumCoverView: View {
                     Text(artists.first!.name)
                         .font(.system(size: 20, weight: .regular, design: .default))
                         .foregroundColor(Color.pink)
-                    Text("\(genre) • \(releaseDate)")
+                    Text("\(category) • \(releaseDate)")
                         .font(.system(size: 11, weight: .medium, design: .default))
                         .offset(x: 0, y: 4)
                         .foregroundColor(Color.secondary)
@@ -39,7 +39,7 @@ struct AlbumCoverView: View {
 struct AlbumCoverView_Previews: PreviewProvider {
     static var previews: some View {
         let albumViewModel: AlbumViewModel = AlbumViewModel()
-        AlbumCoverView(imageUrl: albumViewModel.album.posterFile, title: albumViewModel.album.productTitle, artists: albumViewModel.album.productArtists, genre: albumViewModel.album.genre, releaseDate: albumViewModel.album.productReleaseDate).environment(\.colorScheme, .dark)
-        AlbumCoverView(imageUrl: albumViewModel.album.posterFile, title: albumViewModel.album.productTitle, artists: albumViewModel.album.productArtists, genre: albumViewModel.album.genre, releaseDate: albumViewModel.album.productReleaseDate)
+        AlbumCoverView(imageUrl: albumViewModel.album.posterUrl, title: albumViewModel.album.name, artists: albumViewModel.album.artists, category: albumViewModel.album.category, releaseDate: albumViewModel.album.releaseDate).environment(\.colorScheme, .dark)
+        AlbumCoverView(imageUrl: albumViewModel.album.posterUrl, title: albumViewModel.album.name, artists: albumViewModel.album.artists, category: albumViewModel.album.category, releaseDate: albumViewModel.album.releaseDate)
     }
 }

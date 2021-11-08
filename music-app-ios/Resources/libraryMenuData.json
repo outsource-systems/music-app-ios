@@ -3,7 +3,7 @@
     { "icon": "music.mic", "name": "Artists" },
     { "icon": "square.stack", "name": "Albums" },
     { "icon": "music.note", "name": "Songs" },
-    { "icon": "guitars", "name": "Genres" },
+    { "icon": "guitars", "name": "categorys" },
     { "icon": "music.quarternote.3", "name": "Composers" },
     { "icon": "arrow.down.circle", "name": "Downloaded" },
 ]

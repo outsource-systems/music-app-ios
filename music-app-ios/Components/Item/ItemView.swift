@@ -34,7 +34,7 @@ struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
         let audioViewModel: AudioViewModel = AudioViewModel()
         Group {
-            ItemView(title: audioViewModel.audio.title, size: 150,  imageUrl: audioViewModel.audio.posterFile)
+            ItemView(title: audioViewModel.audio.title, size: 150,  imageUrl: audioViewModel.audio.posterUrl)
         }
     }
 }

@@ -1,16 +1,16 @@
 {
     "id": 1,
-    "productType": "Album",
-    "productTitle": "ENZAN JUNGLE",
-    "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
-    "productArtists": [{
+    "recordType": "Album",
+    "name": "ENZAN JUNGLE",
+    "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+    "artists": [{
         "id": 1,
         "name": "microM",
         "description": "",
-        "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+        "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
     }],
-    "productReleaseDate": "2020",
-    "genre": "POP",
+    "releaseDate": "2020",
+    "category": "POP",
     "audios": [
         {
             "id": 1,
@@ -20,23 +20,23 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "lyrists": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "composers": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 1
+            "sortNumber": 1
         },
         {
             "id": 2,
@@ -46,13 +46,13 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "lyrists": [],
             "composers": [],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 2
+            "sortNumber": 2
         },
         {
             "id": 3,
@@ -62,23 +62,23 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "lyrists": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "composers": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 3
+            "sortNumber": 3
         },
         {
             "id": 4,
@@ -88,23 +88,23 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "lyrists": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "composers": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 4
+            "sortNumber": 4
         },
         {
             "id": 5,
@@ -114,36 +114,36 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
                 },
                 {
                     "id": 2,
                     "name": "KOTA",
                     "description": "",
-                    "posterFile": ""
+                    "posterUrl": ""
                 },
                 {
                     "id": 3,
                     "name": "NASUKA",
                     "description": "",
-                    "posterFile": ""
+                    "posterUrl": ""
                 }
             ],
             "lyrists": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "composers": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 5
+            "sortNumber": 5
         },
         {
             "id": 6,
@@ -153,36 +153,36 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
                 },
                 {
                     "id": 3,
                     "name": "NASUKA",
                     "description": "",
-                    "posterFile": ""
+                    "posterUrl": ""
                 },
                 {
                     "id": 4,
                     "name": "RENZAN",
                     "description": "",
-                    "posterFile": ""
+                    "posterUrl": ""
                 },
             ],
             "lyrists": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "composers": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 6
+            "sortNumber": 6
         },
         {
             "id": 7,
@@ -192,23 +192,23 @@
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "lyrists": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
             "composers": [{
                 "id": 1,
                 "name": "microM",
                 "description": "",
-                "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
+                "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e"
             }],
-            "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
+            "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-3a2a9.appspot.com/o/microM%202021-2.jpg?alt=media&token=db74f7fd-4bed-4db5-937f-2661e995bc9e",
             "isFavorite": false,
-            "diskNumber": 7
+            "sortNumber": 7
         },
     ]
 }

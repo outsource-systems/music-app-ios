@@ -16,7 +16,7 @@ struct AVPlayerStatusBarView: View {
         Button(action: { self.audioPlayerViewModel.showPlayer() })
            {
             HStack(spacing: 0) {
-                ImageCornerRadiusView(size: 48, imageUrl: audio?.posterFile ?? "", isShowShadow: true).padding(.trailing)
+                ImageCornerRadiusView(size: 48, imageUrl: audio?.posterUrl ?? "", isShowShadow: true).padding(.trailing)
                 Text(audio?.title ?? "")
                 Spacer()
                 HStack(spacing: 24) {

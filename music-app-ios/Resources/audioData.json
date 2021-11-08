@@ -6,11 +6,11 @@
         "id": 1,
         "name": "microM",
         "description": "",
-        "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/RHYME%20DRINK.jpg?alt=media&token=a16966df-8bfd-4dbe-8f12-4ec52a4ca1cb"
+        "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/RHYME%20DRINK.jpg?alt=media&token=a16966df-8bfd-4dbe-8f12-4ec52a4ca1cb"
     }],
     "lyrists": [],
     "composers": [],
-    "posterFile": "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/LIFE97%E3%82%A2%E3%83%AB%E3%83%8F%E3%82%99%E3%83%A0%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=43ec18ed-c90b-4fe9-812c-33302284b8dd",
+    "posterUrl": "https://firebasestorage.googleapis.com/v0/b/image-89fb3.appspot.com/o/LIFE97%E3%82%A2%E3%83%AB%E3%83%8F%E3%82%99%E3%83%A0%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.jpg?alt=media&token=43ec18ed-c90b-4fe9-812c-33302284b8dd",
     "isFavorite": false,
-    "itemFile": "https://firebasestorage.googleapis.com/v0/b/mind-productbank.appspot.com/o/y2mate.com%20-%20microM%20%20%E4%BF%BA%E3%82%89%E3%81%AECLASSIC%20FtRENZANNASUKA%20Official%20Music%20Video.mp3?alt=media&token=36aeeeb0-eb7b-40ad-ac62-df5bc0b9c9ce"
+    "url": "https://firebasestorage.googleapis.com/v0/b/mind-productbank.appspot.com/o/y2mate.com%20-%20microM%20%20%E4%BF%BA%E3%82%89%E3%81%AECLASSIC%20FtRENZANNASUKA%20Official%20Music%20Video.mp3?alt=media&token=36aeeeb0-eb7b-40ad-ac62-df5bc0b9c9ce"
 }

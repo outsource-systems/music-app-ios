@@ -17,13 +17,13 @@ struct AudioPlayScreanView: View {
         let artistName = audio?.artists.map { $0.name }.joined(separator: " & ")
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
-            ImageView(imageUrl: audio?.posterFile)
+            ImageView(imageUrl: audio?.posterUrl)
                 .blur(radius: 120.0, opaque: false)
             VStack {
                 VStack {
                     if self.audioPlayerViewModel.currentPlayerViewType.rawValue == "main" {
                         VStack {
-                            ImageCornerRadiusView(size: self.audioPlayerViewModel.playing ? self.audioPlayerViewModel.playImageSize : self.audioPlayerViewModel.pauseImageSize, imageUrl: audio?.posterFile).padding(.vertical).animation(.default)
+                            ImageCornerRadiusView(size: self.audioPlayerViewModel.playing ? self.audioPlayerViewModel.playImageSize : self.audioPlayerViewModel.pauseImageSize, imageUrl: audio?.posterUrl).padding(.vertical).animation(.default)
                         }
                     } else if self.audioPlayerViewModel.currentPlayerViewType.rawValue == "list" {
                         ScrollView {

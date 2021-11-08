@@ -10,6 +10,7 @@ import Combine
 import AVFoundation
 import AVKit
 import SwiftUI
+import MediaPlayer
 
 final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
     @Published var player: AVPlayer = AVPlayer()
@@ -30,6 +31,7 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     @Published var playImageSize: CGFloat! = UIScreen.main.bounds.width * 0.8
     @Published var pauseImageSize: CGFloat! = UIScreen.main.bounds.width * 0.65
     @Published var currentPlayerViewType: PlayerViewType = .main
+    private var nowPlayingInfo = [String : Any]()
     var paddingHrizontal: CGFloat = 15
     var assetKeys = ["playable", "hasProtectedContent"]
     
@@ -44,7 +46,7 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
         self.currentAudioList = currentAudioList
         self.totalAudioIndex = currentAudioIndex
         self.currentAudio = self.currentAudioList[self.totalAudioIndex]
-        self.replasePlayer(url: URL(string: self.currentAudio.itemFile!)!)
+        self.replasePlayer(url: URL(string: self.currentAudio.url!)!)
     }
     
     override init() {
@@ -54,6 +56,7 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
         } catch(let error) {
             print(error.localizedDescription)
         }
+        setupRemoteTransportControls()
     }
     
     func replasePlayer(url: URL)  {
@@ -75,12 +78,15 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
         if self.player.currentItem?.status == .readyToPlay {
             self.playing = true
         }
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [self]_ in
             if self.player.currentItem?.status == .readyToPlay {
                 self.playing = true
                 let value = CMTimeGetSeconds(self.player.currentTime()) / CMTimeGetSeconds(self.player.currentItem!.duration)
                 self.width = self.screen * CGFloat(value)
                 self.playerCurrentTimeString = self.CMTimeToTimeString(cmTime: (self.player.currentTime()))
+                
+                nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = self.player.currentItem!.currentTime().seconds
+                MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
             }
         }
     }
@@ -103,7 +109,8 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     func setCurrentAudioFromAudio(currentAudio: Audio) {
         self.pause()
         self.currentAudio = currentAudio
-        replasePlayer(url: URL(string: currentAudio.itemFile!)!)
+        replasePlayer(url: URL(string: currentAudio.url!)!)
+        setupNowPlaying(audio: currentAudio)
         self.play()
     }
     
@@ -159,5 +166,57 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
             return
         }
         self.currentPlayerViewType = type
+    }
+    
+    func setupRemoteTransportControls() {
+        // Get the shared MPRemoteCommandCenter
+        let commandCenter = MPRemoteCommandCenter.shared()
+
+        // Add handler for Play Command
+        commandCenter.playCommand.addTarget { [unowned self] event in
+            if self.player.rate == 0.0 {
+                self.player.play()
+                return .success
+            }
+            return .commandFailed
+        }
+
+        // Add handler for Pause Command
+        commandCenter.pauseCommand.addTarget { [unowned self] event in
+            if self.player.rate == 1.0 {
+                self.player.pause()
+                return .success
+            }
+            return .commandFailed
+        }
+        
+        // Add handler for Next Command
+        commandCenter.nextTrackCommand.addTarget { [unowned self] event in
+            onNext()
+            return .success
+        }
+        
+        // Add handler for Prev Command
+        commandCenter.previousTrackCommand.addTarget { [unowned self] event in
+            onPrev()
+            return .success
+        }
+    }
+    
+    func setupNowPlaying(audio: Audio) {
+        // Define Now Playing Info
+        nowPlayingInfo[MPMediaItemPropertyTitle] = audio.title
+        let image = DownLoadUIImageByUrl(url: URL(string: audio.posterUrl)!)
+        
+        nowPlayingInfo[MPMediaItemPropertyArtwork] =
+            MPMediaItemArtwork(boundsSize: image.size) { size in
+                return image
+        }
+        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = self.player.currentItem!.currentTime().seconds
+        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = self.player.currentItem!.asset.duration.seconds
+        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = self.player.rate
+
+        // Set the metadata
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
 }

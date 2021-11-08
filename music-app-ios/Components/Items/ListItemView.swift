@@ -26,7 +26,7 @@ struct ListItemView: View {
                     } else {
                         Spacer().frame(width: 15, height: 15)
                     }
-                    Text(String(audio.id)) // audio.diskNumber 曲順に変更する
+                    Text(String(audio.id)) // audio.sortNumber 曲順に変更する
                         .frame(width: 16, alignment: .trailing)
                         .clipped()
                         .padding(.trailing, 15)

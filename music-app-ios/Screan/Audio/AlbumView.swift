@@ -14,7 +14,7 @@ struct AlbumView: View {
             Color("Background").ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: true) {
                     AlbumHeaderView()
-                    AlbumCoverView(imageUrl: album.posterFile, title: album.productTitle, artists: album.productArtists, genre: album.genre, releaseDate: album.productReleaseDate)
+                    AlbumCoverView(imageUrl: album.posterUrl, title: album.name, artists: album.artists, category: album.category, releaseDate: album.releaseDate)
                     PlayAndShuffleButtonView()
                     AudioTitleItemsView(audios: album.audios)
             }

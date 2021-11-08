@@ -11,7 +11,7 @@ struct ProductCoverView: View {
     var imageUrl: String
     var title: String
     var artists: [Artist]
-    var genre: String
+    var category: String
     var releaseDate: String
     
     var body: some View {
@@ -25,7 +25,7 @@ struct ProductCoverView: View {
                     Text(artists.first!.name)
                         .font(.system(size: 20, weight: .regular, design: .default))
                         .foregroundColor(Color.pink)
-                    Text("\(genre) • \(releaseDate)")
+                    Text("\(category) • \(releaseDate)")
                         .font(.system(size: 11, weight: .medium, design: .default))
                         .offset(x: 0, y: 4)
                         .foregroundColor(Color.secondary)
@@ -39,6 +39,6 @@ struct ProductCoverView: View {
 struct ProductCoverView_Previews: PreviewProvider {
     static var previews: some View {
         let productViewModel: ProductViewModel = ProductViewModel()
-        ProductCoverView(imageUrl: productViewModel.product.posterFile, title: productViewModel.product.productTitle, artists: productViewModel.product.productArtists ?? [], genre: productViewModel.product.genre ?? "", releaseDate: productViewModel.product.productReleaseDate).environment(\.colorScheme, .dark)
+        ProductCoverView(imageUrl: productViewModel.product.posterUrl, title: productViewModel.product.name, artists: productViewModel.product.artists ?? [], category: productViewModel.product.category ?? "", releaseDate: productViewModel.product.releaseDate).environment(\.colorScheme, .dark)
     }
 }

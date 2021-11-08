@@ -9,12 +9,12 @@ import Foundation
 
 struct Product: Hashable, Codable, Identifiable {
     var id: Int
-    var productType: String
-    var productTitle: String
-    var posterFile: String
-    var productArtists: [Artist]?
-    var productReleaseDate: String
-    var genre: String?
+    var recordType: String
+    var name: String
+    var posterUrl: String
+    var artists: [Artist]?
+    var releaseDate: String
+    var category: String?
     var count: Int?
     var audios: [Audio]?
 }

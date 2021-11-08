@@ -14,7 +14,7 @@ struct ProductView: View {
         ZStack {
             Color("Background").ignoresSafeArea()
             ScrollView(.vertical, showsIndicators: true) {
-                ProductCoverView(imageUrl: product.posterFile, title: product.productTitle, artists: product.productArtists ?? [], genre: product.genre ?? "", releaseDate: product.productReleaseDate)
+                ProductCoverView(imageUrl: product.posterUrl, title: product.name, artists: product.artists ?? [], category: product.category ?? "", releaseDate: product.releaseDate)
                     PlayAndShuffleButtonView()
                 ProductItemListView(items: product.audios ?? [])
             }

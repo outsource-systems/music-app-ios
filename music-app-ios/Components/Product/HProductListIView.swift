@@ -13,7 +13,7 @@ struct HProductListIView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(products ?? [], id: \.self) { product in
-                    ItemView(title: product.productTitle, size: 150, imageUrl: product.posterFile)
+                    ItemView(title: product.name, size: 150, imageUrl: product.posterUrl)
                 }
             }
             .padding(.horizontal)

@@ -15,8 +15,8 @@ struct Audio: Hashable, Codable, Identifiable {
     var artists: [Artist]
     var lyrists: [Lyrist]
     var composers: [Composer]
-    var posterFile: String
+    var posterUrl: String
     var isFavorite: Bool
-    var diskNumber: Int?
-    var itemFile: String?
+    var sortNumber: Int?
+    var url: String?
 }

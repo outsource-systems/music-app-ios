@@ -145,6 +145,7 @@
 		18B4C4352700812D007EB6E5 /* LibraryMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4C4342700812D007EB6E5 /* LibraryMenuViewModel.swift */; };
 		18B4C437270081BC007EB6E5 /* libraryMenuData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18B4C436270081BC007EB6E5 /* libraryMenuData.json */; };
 		18B4C45D270093F7007EB6E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18B4C45F270093F7007EB6E5 /* Localizable.strings */; };
+		18C1B96227378A8200F7133E /* DownLoadUIImageByUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1B96127378A8200F7133E /* DownLoadUIImageByUrl.swift */; };
 		18F3838126FF59DB007680DD /* ProductCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3838026FF59DB007680DD /* ProductCoverView.swift */; };
 		18F3838326FF5A86007680DD /* productData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F3838226FF5A86007680DD /* productData.json */; };
 		18F3838726FF5E5C007680DD /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3838626FF5E5C007680DD /* ListItemView.swift */; };
@@ -254,6 +255,7 @@
 		18B4C436270081BC007EB6E5 /* libraryMenuData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = libraryMenuData.json; sourceTree = "<group>"; };
 		18B4C45E270093F7007EB6E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18B4C4602700940B007EB6E5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		18C1B96127378A8200F7133E /* DownLoadUIImageByUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownLoadUIImageByUrl.swift; sourceTree = "<group>"; };
 		18F3838026FF59DB007680DD /* ProductCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoverView.swift; sourceTree = "<group>"; };
 		18F3838226FF5A86007680DD /* productData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = productData.json; sourceTree = "<group>"; };
 		18F3838626FF5E5C007680DD /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 			children = (
 				1855D05526FA335D008BE1BF /* jsonLoadModule.swift */,
 				1884D79E2702077800782993 /* LinearGradientModule.swift */,
+				18C1B96127378A8200F7133E /* DownLoadUIImageByUrl.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				1855CF5826F5C302008BE1BF /* AddIconView.swift in Sources */,
 				1855CFC326F63A53008BE1BF /* TextButtonView.swift in Sources */,
 				18B4C41F2700693D007EB6E5 /* ItemHorizontalView.swift in Sources */,
+				18C1B96227378A8200F7133E /* DownLoadUIImageByUrl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1046,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_ASSET_PATHS = "\"music-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 2R8AHR37XC;
 				ENABLE_PREVIEWS = YES;
@@ -1065,7 +1069,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_ASSET_PATHS = "\"music-app-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = 2R8AHR37XC;
 				ENABLE_PREVIEWS = YES;

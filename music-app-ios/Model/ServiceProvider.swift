@@ -13,5 +13,5 @@ struct ServiceProvider: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var description: String
-    var posterFile: String
+    var posterUrl: String
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct ItemHorizontalView: View {
     var audio: Audio
     var size: CGFloat = 50
-    var productTitle: String = "Album"
+    var name: String = "Album"
     var relaseDate: String = "2020"
     
     var body: some View {
@@ -23,7 +23,7 @@ struct ItemHorizontalView: View {
                     Spacer().frame(width: 10)
                 }.padding(0)
                 HStack {
-                    ImageCornerRadiusView(size: size, imageUrl: audio.posterFile)
+                    ImageCornerRadiusView(size: size, imageUrl: audio.posterUrl)
                     VStack {
                         HStack {
                             Text(audio.title)
@@ -31,7 +31,7 @@ struct ItemHorizontalView: View {
                             Spacer()
                         }
                         HStack {
-                            Text("\(productTitle)・\(relaseDate)")
+                            Text("\(name)・\(relaseDate)")
                                 .font(.subheadline)
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("SubText"))
