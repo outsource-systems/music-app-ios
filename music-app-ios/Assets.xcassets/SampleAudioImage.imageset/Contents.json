@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Jungle ジャケ.png",
+      "filename" : "ENZAN JUNGLE.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "ENZAN JUNGLE-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "ENZAN JUNGLE-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
