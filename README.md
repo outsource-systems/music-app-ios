@@ -24,11 +24,11 @@ IOSのアーティストがオリジナルのストリーミング音楽アプ�
 
 # image
 ## xcode
-![](img/xcode/home.png)
+<img src="img/xcode/home.png" width="500" />
 
-![](img/xcode/library.png)
+<img src="img/xcode/library.png" width="500" />
 
-![](img/xcode/avplayer.png)
+<img src="img/xcode/avplayer.png" width="500" />
 
 
 ## Application screen
@@ -36,56 +36,56 @@ IOSのアーティストがオリジナルのストリーミング音楽アプ�
 ### Home screen
 
 white
-![](img/ios/white/home.png)
+<img src="img/ios/white/home.png" width="300" />
 
 dark
-![](img/ios/dark/home.png)
+<img src="img/ios/dark/home.png" width="300" />
 
 ### Music playback screen
 
 white
-![](img/ios/white/player.png)
+<img src="img/ios/white/player.png" width="300" />
 
 dark
-![](img/ios/dark/player.png)
+<img src="img/ios/dark/player.png" width="300" />
 
 ### Premium Member Screen
 white
-![](img/ios/white/subscribe.png)
+<img src="img/ios/white/subscribe.png" width="300" />
 
 dark
-![](img/ios/dark/subscribe.png)
+<img src="img/ios/dark/subscribe.png" width="300" />
 
 ### Library screen
 white
-![](img/ios/white/library.png)
+<img src="img/ios/white/library.png" width="300" />
 
 dark
-![](img/ios/dark/library.png)
+<img src="img/ios/dark/library.png" width="300" />
 
 ### Top Song Screen
 
 white
-![](img/ios/white/topsongs.png)
+<img src="img/ios/white/topsongs.png" width="300" />
 
 dark
-![](img/ios/dark/topsongs.png)
+<img src="img/ios/dark/topsongs.png" width="300">
 
 
 ## Icons
 
 white
-![](img/ios/white/icon.png)
+<img src="img/ios/white/icon.png" width="300" />
 
 dark
-![](img/ios/dark/icon.png)
+<img src="img/ios/dark/icon.png" width="300" />
 
 
 ## Artists who helped us.
 
 ### **microM**
 
-![](img/microm.png)
+<img src="img/microm.png" width="300" />
 
 Spotify: https://open.spotify.com/artist/5ueB0CVSf1FYLCRCQeycLY
 
