@@ -36,48 +36,61 @@ IOSのアーティストがオリジナルのストリーミング音楽アプ�
 ### Home screen
 
 white
+
 <img src="img/ios/white/home.png" width="300" />
 
 dark
+
 <img src="img/ios/dark/home.png" width="300" />
 
 ### Music playback screen
 
 white
+
 <img src="img/ios/white/player.png" width="300" />
 
 dark
+
 <img src="img/ios/dark/player.png" width="300" />
 
 ### Premium Member Screen
 white
+
 <img src="img/ios/white/subscribe.png" width="300" />
 
 dark
+
 <img src="img/ios/dark/subscribe.png" width="300" />
 
 ### Library screen
+
 white
+
 <img src="img/ios/white/library.png" width="300" />
 
 dark
+
 <img src="img/ios/dark/library.png" width="300" />
 
 ### Top Song Screen
 
 white
+
 <img src="img/ios/white/topsongs.png" width="300" />
 
 dark
+
 <img src="img/ios/dark/topsongs.png" width="300">
 
 
 ## Icons
 
 white
+
 <img src="img/ios/white/icon.png" width="300" />
 
 dark
+
 <img src="img/ios/dark/icon.png" width="300" />
 
 
