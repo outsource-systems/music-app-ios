@@ -17,7 +17,7 @@ struct HListItemView: View {
             HStack {
                 if (audios != nil) {
                     ForEach(audios ?? [], id: \.self) { audio in
-                        ItemView(title: audio.title, size: 150, imageUrl: audio.posterUrl)
+                        ItemView(name: audio.name, size: 150, imageUrl: audio.posterUrl)
                     }
                 } else if (products != nil) {
                     ForEach(products ?? [], id: \.self) { product in
@@ -35,7 +35,7 @@ struct HListItemView: View {
                                                 }
                                             }
                         }) {
-                            ItemView(title: product.name, size: 150, imageUrl: product.posterUrl)
+                            ItemView(name: product.name, size: 150, imageUrl: product.posterUrl)
                                 .navigationBarHidden(false)
                         }
                     }

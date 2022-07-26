@@ -9,5 +9,6 @@ import Foundation
 import Combine
 
 final class ProductListViewModel: ObservableObject {
-    @Published var productsLists: [ProductList] = [load("singlesAndEpsData.json"), load("albumsData.json")]
+   var productsLists: [ProductList] = [load("singlesAndEpsData.json"), load("albumsData.json")]
+   var productListApiModels: [ApiModel] = load("productListApi.json")
 }

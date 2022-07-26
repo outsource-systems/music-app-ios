@@ -32,7 +32,7 @@ struct ListItemView: View {
                         .padding(.trailing, 15)
                         .foregroundColor(Color("Text"))
                     VStack(alignment: .leading) {
-                        Text(audio.title)
+                        Text(audio.name)
                     }
                     Spacer()
                     AddIconView(size: 30)
@@ -46,8 +46,8 @@ struct ListItemView: View {
 
 struct ListItemView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
-    static let audio: Audio = topItemViewModel.audioList.audios[0]
-    static let audios: [Audio] = topItemViewModel.audioList.audios
+    static let audio: Audio = topItemViewModel.items[0]
+    static let audios: [Audio] = topItemViewModel.items
     static var previews: some View {
         ListItemView(audio: audio).environment(\.colorScheme, .dark).background(Color(.black))
         ListItemView(audio: audio)

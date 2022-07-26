@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import SwiftUI
-import CoreLocation
 
 struct Lyrist: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
-    var description: String?
-    var posterUrl: String?
+    var description: String = String()
+    var posterUrl: String = String()
 }

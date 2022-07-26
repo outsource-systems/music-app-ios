@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ItemView: View {
-    let title: String
+    let name: String
     let size: CGFloat
     let imageUrl: String?
     
-    init (title: String = "No Title", size: CGFloat = 150, imageUrl: String? = nil) {
-        self.title = title
+    init (name: String = "No Title", size: CGFloat = 150, imageUrl: String? = nil) {
+        self.name = name
         self.size = size
         self.imageUrl = imageUrl
     }
@@ -25,7 +25,7 @@ struct ItemView: View {
             } else {
                 ItemSampleView(size: size)
             }
-            Text(title).foregroundColor(Color("Text"))
+            Text(name).foregroundColor(Color("Text"))
         }
     }
 }
@@ -34,7 +34,7 @@ struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
         let audioViewModel: AudioViewModel = AudioViewModel()
         Group {
-            ItemView(title: audioViewModel.audio.title, size: 150,  imageUrl: audioViewModel.audio.posterUrl)
+            ItemView(name: audioViewModel.audio.name, size: 150,  imageUrl: audioViewModel.audio.posterUrl)
         }
     }
 }

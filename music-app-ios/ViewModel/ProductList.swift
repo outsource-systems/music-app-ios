@@ -8,6 +8,6 @@
 import Foundation
 
 struct ProductList: Hashable, Codable {
-    var productsTitle: String
+    var title: String
     var products: [Product]
 }

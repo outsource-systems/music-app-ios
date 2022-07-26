@@ -39,7 +39,7 @@ struct AudioPlayScreanView: View {
                 }.frame(height: self.audioPlayerViewModel.screen).animation(.default)
                 VStack {
                     HStack {
-                        Text(audio!.title)
+                        Text(audio!.name)
                             .font(.title2)
                             .fontWeight(.bold)
                         Spacer()
@@ -67,8 +67,8 @@ struct AudioPlayScreanView: View {
 
 struct AudioPlayScreanView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
-    static let audio: Audio = topItemViewModel.audioList.audios[0]
-    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.audioList.audios, currentAudioIndex: 0)
+    static let audio: Audio = topItemViewModel.items[0]
+    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.items, currentAudioIndex: 0)
     
     static var previews: some View {
         AudioPlayScreanView().environmentObject(audioPlayerViewModel).environment(\.colorScheme, .dark)

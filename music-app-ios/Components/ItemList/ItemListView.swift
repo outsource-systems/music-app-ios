@@ -15,10 +15,11 @@ struct ItemListView: View {
     let rightLinkDestination: AnyView
     let itemWidth: CGFloat = 390
     let rows: [GridItem] = Array(repeating: .init(.fixed(50)), count: 5)
+    var onClickRightButton: (() -> Void)!
     
     var body: some View {
         VStack {
-            ListHeader(headerTitle: headerTitle, rightLinkText: rightLinkText, rightLinkDestination: rightLinkDestination)
+            ListHeader(headerTitle: headerTitle, rightLinkText: rightLinkText, rightLinkDestination: rightLinkDestination, onClickRightButton: onClickRightButton)
             ScrollView(.horizontal) {
                 LazyHGrid(rows: rows, alignment: .top) {
                     ForEach(Array(audios.enumerated()), id: \.offset) { index, audio in
@@ -40,7 +41,7 @@ struct ItemListView_Previews: PreviewProvider {
         let rightLinkText: String = "See All"
         let topItemViewModel: TopItemViewModel = TopItemViewModel()
         
-        ItemListView(headerTitle: headerTitle, rightLinkText: rightLinkText, audios: topItemViewModel.audioList.audios, rightLinkDestination: AnyView(Text(rightLinkText))).environment(\.colorScheme, .dark).background(Color(.black)).environmentObject(AudioPlayerViewModel())
-        ItemListView(headerTitle: headerTitle, rightLinkText: rightLinkText, audios: topItemViewModel.audioList.audios, rightLinkDestination: AnyView(Text(rightLinkText))).environmentObject(AudioPlayerViewModel())
+        ItemListView(headerTitle: headerTitle, rightLinkText: rightLinkText, audios: topItemViewModel.items, rightLinkDestination: AnyView(Text(rightLinkText))).environment(\.colorScheme, .dark).background(Color(.black)).environmentObject(AudioPlayerViewModel())
+        ItemListView(headerTitle: headerTitle, rightLinkText: rightLinkText, audios: topItemViewModel.items, rightLinkDestination: AnyView(Text(rightLinkText))).environmentObject(AudioPlayerViewModel())
     }
 }

@@ -11,6 +11,7 @@ struct ListHeader: View {
     let headerTitle: String
     let rightLinkText: String
     let rightLinkDestination: AnyView
+    var onClickRightButton: (() -> Void)!
     
     var body: some View {
         HStack {
@@ -20,7 +21,7 @@ struct ListHeader: View {
                 .multilineTextAlignment(.leading)
                 .padding(.leading)
             Spacer()
-            TextButtonView(labelText: rightLinkText, destination: rightLinkDestination).padding(.trailing)
+            TextButtonView(labelText: rightLinkText, destination: rightLinkDestination, onClickButton: onClickRightButton).padding(.trailing)
         }
     }
 }

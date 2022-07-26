@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Best Friend",
+        "name": "Best Friend",
         "time": "2:51",
         "artists": [{
             "id": 1,
@@ -17,7 +17,7 @@
     },
     {
         "id": 2,
-        "title": "Dive",
+        "name": "Dive",
         "time": "1:34",
         "artists": [{
             "id": 1,
@@ -33,7 +33,7 @@
     },
     {
         "id": 3,
-        "title": "Lost Life",
+        "name": "Lost Life",
         "time": "2:46",
         "artists": [{
             "id": 1,

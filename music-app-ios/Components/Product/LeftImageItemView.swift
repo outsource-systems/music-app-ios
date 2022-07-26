@@ -9,14 +9,14 @@ import SwiftUI
 
 struct LeftImageItemView: View {
     let size: CGFloat
-    let title: String
+    let name: String
     let count: Int
     let date: String
     let imageUrl: String?
 
-    init (size: CGFloat = 100, title: String = "No Title", count: Int = 1, date: String = "SEP 8, 2021", imageUrl: String? = nil) {
+    init (size: CGFloat = 100, name: String = "No Title", count: Int = 1, date: String = "SEP 8, 2021", imageUrl: String? = nil) {
         self.size = size
-        self.title = title
+        self.name = name
         self.count = count
         self.date = date
         self.imageUrl = imageUrl
@@ -32,7 +32,7 @@ struct LeftImageItemView: View {
                 Text(date)
                     .font(.subheadline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(title)
+                Text(name)
                     .font(.title3)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)

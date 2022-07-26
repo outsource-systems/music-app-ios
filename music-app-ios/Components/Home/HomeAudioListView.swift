@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeAudioListView: View {
-    var productListViewModel: ProductListViewModel = ProductListViewModel()
+    @StateObject var productListViewModel: ProductListViewModel = ProductListViewModel()
     
     var body: some View {
         VStack {
@@ -20,10 +20,10 @@ struct HomeAudioListView: View {
             ForEach(productListViewModel.productsLists, id: \.self) { productList in
                 Divider()
                 Spacer().frame(height: 20)
-                ProductListView(products: productList.products, headerTitle: productList.productsTitle)
+                ProductListView(products: productList.products, headerTitle: productList.title)
             }
             PremiumButtonView()
-        }.padding(.bottom, 100)
+        }
     }
 }
 

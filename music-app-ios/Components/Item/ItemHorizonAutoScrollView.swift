@@ -12,7 +12,7 @@ struct ItemHorizonAutoScrollView: View {
     let topItemViewModel: TopItemViewModel = TopItemViewModel()
     
     var body: some View {
-        let reverseAudios = topItemViewModel.audioList.audios.reversed()
+        let reverseAudios = topItemViewModel.items.reversed()
         ZStack {
             Image("HomeCover")
                 .resizable()
@@ -24,7 +24,7 @@ struct ItemHorizonAutoScrollView: View {
                         ScrollView(.horizontal) {
                             HStack(alignment: .firstTextBaseline) {
                                 if (row % 2 == 0) {
-                                    ForEach(topItemViewModel.audioList.audios, id: \.self) { audio in
+                                    ForEach(topItemViewModel.items, id: \.self) { audio in
                                         ImageView(size: size, imageUrl: audio.posterUrl)
                                     }
                                 } else {

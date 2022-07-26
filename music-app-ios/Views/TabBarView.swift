@@ -12,35 +12,35 @@ struct TabBarView: View {
     
     var body: some View {
             TabView {
-                HomeScreanView()
+                HomeScreanView().padding(.bottom, 50)
                     .tabItem {
                         VStack {
                             Image(systemName: "house.fill")
                             Text("Home")
                         }
                 }.tag(1)
-                SearchScreanView()
+                SearchScreanView().padding(.bottom, 50)
                     .tabItem {
                         VStack {
                             Image(systemName: "magnifyingglass")
                             Text("Search")
                         }
                 }.tag(2)
-                BlogScreanView()
+                BlogScreanView().padding(.bottom, 50)
                     .tabItem {
                         VStack {
                             Image(systemName: "newspaper.fill")
                             Text("Blog")
                         }
                 }.tag(3)
-                LibraryScreanView()
+                LibraryScreanView().padding(.bottom, 50)
                     .tabItem {
                         VStack {
                             Image(systemName: "music.note.list")
                             Text("Library")
                         }
                 }.tag(4)
-                SettingScreanView()
+                SettingScreanView().padding(.bottom, 50)
                     .tabItem {
                         VStack {
                             Image(systemName: "gearshape.fill")

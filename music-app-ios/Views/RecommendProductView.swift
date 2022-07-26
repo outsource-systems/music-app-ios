@@ -12,7 +12,7 @@ struct RecommendProductView: View {
     
     var body: some View {
         let recommendProduct: Product = recommendProductViewModel.recommendProduct
-        LeftImageItemView(size: 100, title: recommendProduct.name, count: recommendProduct.count ?? 0, date: recommendProduct.releaseDate, imageUrl: recommendProduct.posterUrl)
+        LeftImageItemView(size: 100, name: recommendProduct.name, count: recommendProduct.count ?? 0, date: recommendProduct.releaseDate, imageUrl: recommendProduct.posterUrl)
     }
 }
 

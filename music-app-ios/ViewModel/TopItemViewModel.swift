@@ -7,7 +7,14 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 final class TopItemViewModel: ObservableObject {
-    @Published var audioList: AudioList = load("topAudiosData.json")
+    @Published var items: [Audio] = [Audio]()
+    @Published var headerTitle: String = "Top Songs"
+    let rightLinkText: String = "See All"
+
+    init() {
+        self.items = load("topAudiosData.json")
+    }
 }

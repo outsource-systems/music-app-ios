@@ -10,12 +10,12 @@ import CoreLocation
 
 struct Audio: Hashable, Codable, Identifiable {
     var id: Int
-    var title: String
+    var name: String
     var time: String
     var artists: [Artist]
     var lyrists: [Lyrist]
     var composers: [Composer]
-    var posterUrl: String
+    var posterUrl: String?
     var isFavorite: Bool
     var sortNumber: Int?
     var url: String?

@@ -17,7 +17,7 @@ struct AVPlayerStatusBarView: View {
            {
             HStack(spacing: 0) {
                 ImageCornerRadiusView(size: 48, imageUrl: audio?.posterUrl ?? "", isShowShadow: true).padding(.trailing)
-                Text(audio?.title ?? "")
+                Text(audio?.name ?? "")
                 Spacer()
                 HStack(spacing: 24) {
                     Button(action: {
@@ -47,8 +47,8 @@ struct AVPlayerStatusBarView: View {
 
 struct AVPlayerStatusBarView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
-    static let audio: Audio = topItemViewModel.audioList.audios[0]
-    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.audioList.audios, currentAudioIndex: 0)
+    static let audio: Audio = topItemViewModel.items[0]
+    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.items, currentAudioIndex: 0)
     
     static var previews: some View {
         Group {

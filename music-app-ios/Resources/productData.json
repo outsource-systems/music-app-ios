@@ -14,7 +14,7 @@
     "audios": [
         {
             "id": 1,
-            "title": "Rainbow",
+            "name": "Rainbow",
             "time": "00:02:37",
             "artists": [{
                 "id": 1,
@@ -41,7 +41,7 @@
         },
         {
             "id": 2,
-            "title": "Nasty",
+            "name": "Nasty",
             "time": "00:01:57",
             "artists": [{
                 "id": 1,
@@ -58,7 +58,7 @@
         },
         {
             "id": 3,
-            "title": "Remember",
+            "name": "Remember",
             "time": "00:02:17",
             "artists": [{
                 "id": 1,
@@ -85,7 +85,7 @@
         },
         {
             "id": 4,
-            "title": "Juicy Moonlight",
+            "name": "Juicy Moonlight",
             "time": "00:02:52",
             "artists": [{
                 "id": 1,
@@ -112,7 +112,7 @@
         },
         {
             "id": 5,
-            "title": "Beat Friend",
+            "name": "Beat Friend",
             "time": "00:02:51",
             "artists": [{
                 "id": 1,
@@ -152,7 +152,7 @@
         },
         {
             "id": 6,
-            "title": "Kiro",
+            "name": "Kiro",
             "time": "00:02:28",
             "artists": [{
                 "id": 1,
@@ -192,7 +192,7 @@
         },
         {
             "id": 7,
-            "title": "Before Night",
+            "name": "Before Night",
             "time": "00:03:37",
             "artists": [{
                 "id": 1,

@@ -205,8 +205,8 @@ final class AudioPlayerViewModel: NSObject, ObservableObject, AVAudioPlayerDeleg
     
     func setupNowPlaying(audio: Audio) {
         // Define Now Playing Info
-        nowPlayingInfo[MPMediaItemPropertyTitle] = audio.title
-        let image = DownLoadUIImageByUrl(url: URL(string: audio.posterUrl)!)
+        nowPlayingInfo[MPMediaItemPropertyTitle] = audio.name
+        let image = DownLoadUIImageByUrl(url: URL(string: audio.posterUrl!)!)
         
         nowPlayingInfo[MPMediaItemPropertyArtwork] =
             MPMediaItemArtwork(boundsSize: image.size) { size in

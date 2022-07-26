@@ -26,7 +26,7 @@ struct ItemHorizontalView: View {
                     ImageCornerRadiusView(size: size, imageUrl: audio.posterUrl)
                     VStack {
                         HStack {
-                            Text(audio.title)
+                            Text(audio.name)
                                 .fontWeight(.bold)
                             Spacer()
                         }
@@ -49,7 +49,7 @@ struct ItemHorizontalView: View {
 
 struct ItemHorizontalView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
-    static let audio: Audio = topItemViewModel.audioList.audios[0]
+    static let audio: Audio = topItemViewModel.items[0]
     
     static var previews: some View {
         ItemHorizontalView(audio: audio).background(Color("Background")).environment(\.colorScheme, .dark)

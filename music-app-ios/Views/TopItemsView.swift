@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct TopItemsView: View {
-    let headerTitle: String = "Top Songs"
-    let rightLinkText: String = "See All"
-    let topItemViewModel: TopItemViewModel = TopItemViewModel()
+    @ObservedObject var topItemViewModel: TopItemViewModel = TopItemViewModel()
 
+    func onClickRightButton() {
+    }
+    
     var body: some View {
-        ItemListView(headerTitle: headerTitle,
-                     rightLinkText: rightLinkText,
-                     audios: topItemViewModel.audioList.audios, rightLinkDestination: AnyView(ItemListVerticalView(audios: topItemViewModel.audioList.audios).navigationBarTitle(headerTitle, displayMode: .inline)))
+        ItemListView(headerTitle: self.topItemViewModel.headerTitle,
+                     rightLinkText: self.topItemViewModel.rightLinkText,
+                     audios: topItemViewModel.items,
+                     rightLinkDestination: AnyView(ItemListVerticalView(audios: topItemViewModel.items).navigationBarTitle(self.topItemViewModel.headerTitle, displayMode: .inline)),
+                     onClickRightButton: onClickRightButton
+        )
     }
 }
 

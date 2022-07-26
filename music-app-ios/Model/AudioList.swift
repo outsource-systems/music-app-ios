@@ -8,7 +8,6 @@
 import Foundation
 
 struct AudioList: Hashable, Codable {
-    var audiosTitle: String
-    var audios: [Audio]
+    var audiosTitle: String = String()
+    var audios: [Audio] = [Audio]()
 }
-

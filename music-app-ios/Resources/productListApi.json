@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Singles & EPs",
+        "url": "http://localhost:3000/api/v1/products?q=%5Brecord_type_eq%5D='single'"
+    },
+    {
+        "title": "Albums",
+        "url": "http://localhost:3000/api/v1/products?q=%5Brecord_type_eq%5D='album'"
+    }
+]

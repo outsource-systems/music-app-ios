@@ -11,10 +11,11 @@ struct ProductListView: View {
     var products: [Product]
     let headerTitle: String
     let rightLinkText: String = "See All"
+    var onClickRightButton: (() -> Void)!
     
     var body: some View {
         VStack {
-            ListHeader(headerTitle: headerTitle, rightLinkText: rightLinkText, rightLinkDestination: AnyView(ProductVListView(products: products).navigationBarTitle(headerTitle, displayMode: .inline)))
+            ListHeader(headerTitle: headerTitle, rightLinkText: rightLinkText, rightLinkDestination: AnyView(ProductVListView(products: products).navigationBarTitle(headerTitle, displayMode: .inline)), onClickRightButton: onClickRightButton)
             ProductHListView(products: products)
         }
     }
@@ -23,6 +24,6 @@ struct ProductListView: View {
 struct ProductListView_Previews: PreviewProvider {
     static var previews: some View {
         let productListViewModel: ProductListViewModel = ProductListViewModel()
-        ProductListView(products: productListViewModel.productsLists[0].products, headerTitle: productListViewModel.productsLists[0].productsTitle)
+        ProductListView(products: productListViewModel.productsLists[0].products, headerTitle: productListViewModel.productsLists[0].title)
     }
 }

@@ -23,8 +23,8 @@ struct AVPlayerVolumeView: View {
 
 struct AVPlayerVolumeView_Previews: PreviewProvider {
     static let topItemViewModel: TopItemViewModel = TopItemViewModel()
-    static let audio: Audio = topItemViewModel.audioList.audios[0]
-    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.audioList.audios, currentAudioIndex: 0)
+    static let audio: Audio = topItemViewModel.items[0]
+    static var audioPlayerViewModel = AudioPlayerViewModel(currentAudioList: topItemViewModel.items, currentAudioIndex: 0)
     
     static var previews: some View {
         AVPlayerVolumeView().environmentObject(audioPlayerViewModel).background(Color("Background")).environment(\.colorScheme, .dark)

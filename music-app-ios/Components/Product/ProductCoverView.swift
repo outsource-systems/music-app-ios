@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductCoverView: View {
     var imageUrl: String
-    var title: String
+    var name: String
     var artists: [Artist]
     var category: String
     var releaseDate: String
@@ -20,7 +20,7 @@ struct ProductCoverView: View {
             VStack {
                 ImageCornerRadiusView(size: 223, imageUrl: imageUrl)
                 VStack(spacing: 1) {
-                    Text(title)
+                    Text(name)
                         .font(.system(size: 20, weight: .medium, design: .default))
                     Text(artists.first!.name)
                         .font(.system(size: 20, weight: .regular, design: .default))
@@ -39,6 +39,6 @@ struct ProductCoverView: View {
 struct ProductCoverView_Previews: PreviewProvider {
     static var previews: some View {
         let productViewModel: ProductViewModel = ProductViewModel()
-        ProductCoverView(imageUrl: productViewModel.product.posterUrl, title: productViewModel.product.name, artists: productViewModel.product.artists ?? [], category: productViewModel.product.category ?? "", releaseDate: productViewModel.product.releaseDate).environment(\.colorScheme, .dark)
+        ProductCoverView(imageUrl: productViewModel.product.posterUrl, name: productViewModel.product.name, artists: productViewModel.product.artists ?? [], category: productViewModel.product.category ?? "", releaseDate: productViewModel.product.releaseDate).environment(\.colorScheme, .dark)
     }
 }

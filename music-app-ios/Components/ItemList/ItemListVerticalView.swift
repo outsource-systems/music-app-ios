@@ -27,6 +27,6 @@ struct ItemListVerticalView: View {
 struct ItemListVerticalView_Previews: PreviewProvider {
     static var previews: some View {
         let topItemViewModel: TopItemViewModel = TopItemViewModel()
-        ItemListVerticalView(audios: topItemViewModel.audioList.audios)
+        ItemListVerticalView(audios: topItemViewModel.items)
     }
 }

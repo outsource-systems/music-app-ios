@@ -25,7 +25,7 @@ struct ProductNavigationLinkView: View {
                                 }
                             }
         }) {
-            ItemView(title: product.name, size: size, imageUrl: product.posterUrl)
+            ItemView(name: product.name, size: size, imageUrl: product.posterUrl)
                 .navigationBarHidden(false)
         }
     }
